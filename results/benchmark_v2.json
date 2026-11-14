@@ -1,0 +1,78 @@
+{
+ "n_pairs": 197,
+ "n_true_matches": 37,
+ "model": "jev-1.14.0",
+ "prompt": "v2",
+ "jev": {
+  "accuracy": 0.985,
+  "precision": 1.0,
+  "recall": 0.919,
+  "false_matches": 0,
+  "missed_matches": 3,
+  "tp": 34,
+  "tn": 160,
+  "three_way_accuracy": 0.944
+ },
+ "fuzzy_best_cutoff": {
+  "cutoff": 97,
+  "accuracy": 0.832,
+  "precision": 0.577,
+  "recall": 0.405,
+  "false_matches": 11,
+  "missed_matches": 22,
+  "tp": 15,
+  "tn": 149
+ },
+ "fuzzy_at_90": {
+  "accuracy": 0.701,
+  "precision": 0.351,
+  "recall": 0.703,
+  "false_matches": 48,
+  "missed_matches": 11,
+  "tp": 26,
+  "tn": 112
+ },
+ "jev_high_confidence": {
+  "share_of_pairs": 0.761,
+  "accuracy": 0.993,
+  "precision": 1.0,
+  "recall": 0.938,
+  "false_matches": 0,
+  "missed_matches": 1,
+  "tp": 15,
+  "tn": 134
+ },
+ "latency_ms": {
+  "median": 176,
+  "p90": 233
+ },
+ "tokens_per_pair": 1096,
+ "cost_usd_this_run": 0.00906,
+ "cost_usd_per_million_pairs": 46.01,
+ "jev_errors": [
+  {
+   "pair_id": "p2392",
+   "polymarket": "Will the US economy be in a soft landing at the end of 2026?",
+   "kalshi": "State of the economy at the end of 2026? \u2014 Soft landing",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.82
+  },
+  {
+   "pair_id": "p1113",
+   "polymarket": "Will OpenAI announce another Millennium Prize solution by December 31, 2026?",
+   "kalshi": "Will OpenAI announce another Millennium Prize solution before Jan 1, 2027?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.35
+  },
+  {
+   "pair_id": "p1731",
+   "polymarket": "Will Christopher Luxon be the next Prime Minister of New Zealand after the 2026 elections?",
+   "kalshi": "Will Christopher Luxon become Prime Minister of New Zealand following the 2026 New Zealand general election?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.55
+  }
+ ]
+}

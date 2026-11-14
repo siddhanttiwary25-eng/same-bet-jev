@@ -1,0 +1,2957 @@
+{
+ "p1677": {
+  "decision": "different",
+  "confidence": 0.26,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.49,
+   "different": 0.51
+  },
+  "same_subject": 0.09,
+  "same_terms": 0.02,
+  "same_window": 0.86,
+  "latency_ms": 170,
+  "input_tokens": 920,
+  "model": "jev-1.14.0"
+ },
+ "p0389": {
+  "decision": "variant",
+  "confidence": 0.64,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.76,
+   "different": 0.24
+  },
+  "same_subject": 0.77,
+  "same_terms": 0.02,
+  "same_window": 0.86,
+  "latency_ms": 177,
+  "input_tokens": 1069,
+  "model": "jev-1.14.0"
+ },
+ "p0417": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.55,
+  "same_terms": 0.03,
+  "same_window": 0.05,
+  "latency_ms": 174,
+  "input_tokens": 1151,
+  "model": "jev-1.14.0"
+ },
+ "p2392": {
+  "decision": "variant",
+  "confidence": 0.96,
+  "probabilities": {
+   "same": 0.03,
+   "variant": 0.97,
+   "different": 0.0
+  },
+  "same_subject": 0.42,
+  "same_terms": 0.29,
+  "same_window": 0.69,
+  "latency_ms": 301,
+  "input_tokens": 1013,
+  "model": "jev-1.14.0"
+ },
+ "p0667": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.99,
+   "different": 0.01
+  },
+  "same_subject": 0.03,
+  "same_terms": 0.02,
+  "same_window": 0.15,
+  "latency_ms": 170,
+  "input_tokens": 847,
+  "model": "jev-1.14.0"
+ },
+ "p0193": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.03,
+  "same_window": 0.14,
+  "latency_ms": 169,
+  "input_tokens": 851,
+  "model": "jev-1.14.0"
+ },
+ "p1251": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.06,
+  "same_window": 0.76,
+  "latency_ms": 181,
+  "input_tokens": 1026,
+  "model": "jev-1.14.0"
+ },
+ "p2108": {
+  "decision": "variant",
+  "confidence": 0.92,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.95,
+   "different": 0.05
+  },
+  "same_subject": 0.29,
+  "same_terms": 0.09,
+  "same_window": 0.06,
+  "latency_ms": 173,
+  "input_tokens": 961,
+  "model": "jev-1.14.0"
+ },
+ "p1944": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.01,
+   "variant": 0.99,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.26,
+  "same_window": 0.1,
+  "latency_ms": 175,
+  "input_tokens": 1068,
+  "model": "jev-1.14.0"
+ },
+ "p2406": {
+  "decision": "variant",
+  "confidence": 0.42,
+  "probabilities": {
+   "same": 0.38,
+   "variant": 0.61,
+   "different": 0.01
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.92,
+  "same_window": 0.9,
+  "latency_ms": 186,
+  "input_tokens": 951,
+  "model": "jev-1.14.0"
+ },
+ "p1064": {
+  "decision": "variant",
+  "confidence": 0.97,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.98,
+   "different": 0.02
+  },
+  "same_subject": 0.11,
+  "same_terms": 0.08,
+  "same_window": 0.86,
+  "latency_ms": 167,
+  "input_tokens": 883,
+  "model": "jev-1.14.0"
+ },
+ "p1759": {
+  "decision": "variant",
+  "confidence": 0.25,
+  "probabilities": {
+   "same": 0.49,
+   "variant": 0.5,
+   "different": 0.01
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.9,
+  "same_window": 0.84,
+  "latency_ms": 171,
+  "input_tokens": 985,
+  "model": "jev-1.14.0"
+ },
+ "p1257": {
+  "decision": "different",
+  "confidence": 0.86,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.09,
+   "different": 0.91
+  },
+  "same_subject": 0.01,
+  "same_terms": 0.24,
+  "same_window": 0.56,
+  "latency_ms": 226,
+  "input_tokens": 944,
+  "model": "jev-1.14.0"
+ },
+ "p1724": {
+  "decision": "different",
+  "confidence": 0.92,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.05,
+   "different": 0.95
+  },
+  "same_subject": 0.96,
+  "same_terms": 0.02,
+  "same_window": 0.92,
+  "latency_ms": 132,
+  "input_tokens": 945,
+  "model": "jev-1.14.0"
+ },
+ "p1167": {
+  "decision": "variant",
+  "confidence": 0.77,
+  "probabilities": {
+   "same": 0.14,
+   "variant": 0.85,
+   "different": 0.01
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.51,
+  "same_window": 0.46,
+  "latency_ms": 131,
+  "input_tokens": 925,
+  "model": "jev-1.14.0"
+ },
+ "p1592": {
+  "decision": "different",
+  "confidence": 0.5,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.33,
+   "different": 0.67
+  },
+  "same_subject": 0.94,
+  "same_terms": 0.02,
+  "same_window": 0.87,
+  "latency_ms": 219,
+  "input_tokens": 900,
+  "model": "jev-1.14.0"
+ },
+ "p1113": {
+  "decision": "variant",
+  "confidence": 0.7,
+  "probabilities": {
+   "same": 0.19,
+   "variant": 0.8,
+   "different": 0.01
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.74,
+  "same_window": 0.91,
+  "latency_ms": 210,
+  "input_tokens": 1141,
+  "model": "jev-1.14.0"
+ },
+ "p0877": {
+  "decision": "variant",
+  "confidence": 0.85,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.9,
+   "different": 0.1
+  },
+  "same_subject": 0.87,
+  "same_terms": 0.05,
+  "same_window": 0.72,
+  "latency_ms": 262,
+  "input_tokens": 1074,
+  "model": "jev-1.14.0"
+ },
+ "p1317": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.7,
+  "same_terms": 0.04,
+  "same_window": 0.05,
+  "latency_ms": 231,
+  "input_tokens": 1044,
+  "model": "jev-1.14.0"
+ },
+ "p1313": {
+  "decision": "variant",
+  "confidence": 0.91,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.94,
+   "different": 0.06
+  },
+  "same_subject": 0.91,
+  "same_terms": 0.08,
+  "same_window": 0.11,
+  "latency_ms": 279,
+  "input_tokens": 893,
+  "model": "jev-1.14.0"
+ },
+ "p1470": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.99,
+   "different": 0.01
+  },
+  "same_subject": 0.11,
+  "same_terms": 0.02,
+  "same_window": 0.52,
+  "latency_ms": 166,
+  "input_tokens": 1109,
+  "model": "jev-1.14.0"
+ },
+ "p0037": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.99,
+   "different": 0.01
+  },
+  "same_subject": 0.08,
+  "same_terms": 0.03,
+  "same_window": 0.19,
+  "latency_ms": 294,
+  "input_tokens": 845,
+  "model": "jev-1.14.0"
+ },
+ "p0312": {
+  "decision": "variant",
+  "confidence": 0.42,
+  "probabilities": {
+   "same": 0.38,
+   "variant": 0.61,
+   "different": 0.01
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.89,
+  "same_window": 0.71,
+  "latency_ms": 165,
+  "input_tokens": 935,
+  "model": "jev-1.14.0"
+ },
+ "p0887": {
+  "decision": "variant",
+  "confidence": 0.49,
+  "probabilities": {
+   "same": 0.33,
+   "variant": 0.66,
+   "different": 0.01
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.9,
+  "same_window": 0.72,
+  "latency_ms": 151,
+  "input_tokens": 932,
+  "model": "jev-1.14.0"
+ },
+ "p0258": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.04,
+  "same_window": 0.6,
+  "latency_ms": 146,
+  "input_tokens": 1027,
+  "model": "jev-1.14.0"
+ },
+ "p1185": {
+  "decision": "variant",
+  "confidence": 0.74,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.83,
+   "different": 0.17
+  },
+  "same_subject": 0.45,
+  "same_terms": 0.04,
+  "same_window": 0.77,
+  "latency_ms": 137,
+  "input_tokens": 999,
+  "model": "jev-1.14.0"
+ },
+ "p1347": {
+  "decision": "same",
+  "confidence": 0.35,
+  "probabilities": {
+   "same": 0.57,
+   "variant": 0.42,
+   "different": 0.01
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.83,
+  "same_window": 0.89,
+  "latency_ms": 142,
+  "input_tokens": 943,
+  "model": "jev-1.14.0"
+ },
+ "p1390": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.99,
+   "different": 0.01
+  },
+  "same_subject": 0.17,
+  "same_terms": 0.03,
+  "same_window": 0.47,
+  "latency_ms": 142,
+  "input_tokens": 1109,
+  "model": "jev-1.14.0"
+ },
+ "p0126": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.99,
+   "different": 0.01
+  },
+  "same_subject": 0.53,
+  "same_terms": 0.04,
+  "same_window": 0.66,
+  "latency_ms": 153,
+  "input_tokens": 1007,
+  "model": "jev-1.14.0"
+ },
+ "p1940": {
+  "decision": "different",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.01,
+   "different": 0.99
+  },
+  "same_subject": 0.01,
+  "same_terms": 0.16,
+  "same_window": 0.38,
+  "latency_ms": 132,
+  "input_tokens": 974,
+  "model": "jev-1.14.0"
+ },
+ "p2286": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.8,
+  "same_terms": 0.03,
+  "same_window": 0.49,
+  "latency_ms": 141,
+  "input_tokens": 1109,
+  "model": "jev-1.14.0"
+ },
+ "p0286": {
+  "decision": "variant",
+  "confidence": 0.97,
+  "probabilities": {
+   "same": 0.01,
+   "variant": 0.98,
+   "different": 0.01
+  },
+  "same_subject": 0.95,
+  "same_terms": 0.25,
+  "same_window": 0.19,
+  "latency_ms": 174,
+  "input_tokens": 1017,
+  "model": "jev-1.14.0"
+ },
+ "p0160": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.04,
+  "same_window": 0.13,
+  "latency_ms": 168,
+  "input_tokens": 848,
+  "model": "jev-1.14.0"
+ },
+ "p2427": {
+  "decision": "variant",
+  "confidence": 0.46,
+  "probabilities": {
+   "same": 0.35,
+   "variant": 0.64,
+   "different": 0.01
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.88,
+  "same_window": 0.62,
+  "latency_ms": 164,
+  "input_tokens": 941,
+  "model": "jev-1.14.0"
+ },
+ "p0214": {
+  "decision": "variant",
+  "confidence": 0.48,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.65,
+   "different": 0.35
+  },
+  "same_subject": 0.21,
+  "same_terms": 0.02,
+  "same_window": 0.45,
+  "latency_ms": 151,
+  "input_tokens": 842,
+  "model": "jev-1.14.0"
+ },
+ "p0682": {
+  "decision": "variant",
+  "confidence": 0.28,
+  "probabilities": {
+   "same": 0.47,
+   "variant": 0.52,
+   "different": 0.01
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.84,
+  "same_window": 0.87,
+  "latency_ms": 135,
+  "input_tokens": 964,
+  "model": "jev-1.14.0"
+ },
+ "p1285": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.01,
+   "variant": 0.99,
+   "different": 0.0
+  },
+  "same_subject": 0.11,
+  "same_terms": 0.37,
+  "same_window": 0.91,
+  "latency_ms": 133,
+  "input_tokens": 1042,
+  "model": "jev-1.14.0"
+ },
+ "p1623": {
+  "decision": "variant",
+  "confidence": 0.6,
+  "probabilities": {
+   "same": 0.01,
+   "variant": 0.73,
+   "different": 0.26
+  },
+  "same_subject": 0.04,
+  "same_terms": 0.36,
+  "same_window": 0.81,
+  "latency_ms": 154,
+  "input_tokens": 966,
+  "model": "jev-1.14.0"
+ },
+ "p0408": {
+  "decision": "variant",
+  "confidence": 0.97,
+  "probabilities": {
+   "same": 0.01,
+   "variant": 0.98,
+   "different": 0.01
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.29,
+  "same_window": 0.18,
+  "latency_ms": 195,
+  "input_tokens": 1014,
+  "model": "jev-1.14.0"
+ },
+ "p1157": {
+  "decision": "variant",
+  "confidence": 0.34,
+  "probabilities": {
+   "same": 0.43,
+   "variant": 0.56,
+   "different": 0.01
+  },
+  "same_subject": 0.92,
+  "same_terms": 0.88,
+  "same_window": 0.88,
+  "latency_ms": 193,
+  "input_tokens": 920,
+  "model": "jev-1.14.0"
+ },
+ "p1781": {
+  "decision": "variant",
+  "confidence": 0.8,
+  "probabilities": {
+   "same": 0.12,
+   "variant": 0.87,
+   "different": 0.01
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.62,
+  "same_window": 0.86,
+  "latency_ms": 158,
+  "input_tokens": 1040,
+  "model": "jev-1.14.0"
+ },
+ "p0844": {
+  "decision": "variant",
+  "confidence": 0.28,
+  "probabilities": {
+   "same": 0.47,
+   "variant": 0.52,
+   "different": 0.01
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.81,
+  "same_window": 0.81,
+  "latency_ms": 136,
+  "input_tokens": 942,
+  "model": "jev-1.14.0"
+ },
+ "p1853": {
+  "decision": "variant",
+  "confidence": 0.94,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.96,
+   "different": 0.04
+  },
+  "same_subject": 0.09,
+  "same_terms": 0.04,
+  "same_window": 0.23,
+  "latency_ms": 135,
+  "input_tokens": 1061,
+  "model": "jev-1.14.0"
+ },
+ "p1010": {
+  "decision": "different",
+  "confidence": 0.97,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.02,
+   "different": 0.98
+  },
+  "same_subject": 0.02,
+  "same_terms": 0.06,
+  "same_window": 0.37,
+  "latency_ms": 165,
+  "input_tokens": 944,
+  "model": "jev-1.14.0"
+ },
+ "p2317": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.14,
+  "same_window": 0.55,
+  "latency_ms": 130,
+  "input_tokens": 1026,
+  "model": "jev-1.14.0"
+ },
+ "p0163": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.04,
+  "same_window": 0.15,
+  "latency_ms": 124,
+  "input_tokens": 851,
+  "model": "jev-1.14.0"
+ },
+ "p0490": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.03,
+  "same_terms": 0.54,
+  "same_window": 0.71,
+  "latency_ms": 139,
+  "input_tokens": 933,
+  "model": "jev-1.14.0"
+ },
+ "p0645": {
+  "decision": "different",
+  "confidence": 0.85,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.1,
+   "different": 0.9
+  },
+  "same_subject": 0.02,
+  "same_terms": 0.24,
+  "same_window": 0.52,
+  "latency_ms": 132,
+  "input_tokens": 945,
+  "model": "jev-1.14.0"
+ },
+ "p0220": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.99,
+   "different": 0.01
+  },
+  "same_subject": 0.96,
+  "same_terms": 0.03,
+  "same_window": 0.38,
+  "latency_ms": 170,
+  "input_tokens": 949,
+  "model": "jev-1.14.0"
+ },
+ "p2414": {
+  "decision": "variant",
+  "confidence": 0.46,
+  "probabilities": {
+   "same": 0.34,
+   "variant": 0.64,
+   "different": 0.02
+  },
+  "same_subject": 0.51,
+  "same_terms": 0.69,
+  "same_window": 0.81,
+  "latency_ms": 131,
+  "input_tokens": 922,
+  "model": "jev-1.14.0"
+ },
+ "p0311": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.04,
+  "same_terms": 0.53,
+  "same_window": 0.68,
+  "latency_ms": 134,
+  "input_tokens": 934,
+  "model": "jev-1.14.0"
+ },
+ "p1609": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.01,
+   "variant": 0.99,
+   "different": 0.0
+  },
+  "same_subject": 0.75,
+  "same_terms": 0.31,
+  "same_window": 0.11,
+  "latency_ms": 144,
+  "input_tokens": 1018,
+  "model": "jev-1.14.0"
+ },
+ "p0366": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.04,
+  "same_window": 0.63,
+  "latency_ms": 204,
+  "input_tokens": 1039,
+  "model": "jev-1.14.0"
+ },
+ "p1017": {
+  "decision": "variant",
+  "confidence": 0.34,
+  "probabilities": {
+   "same": 0.43,
+   "variant": 0.56,
+   "different": 0.01
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.86,
+  "same_window": 0.91,
+  "latency_ms": 201,
+  "input_tokens": 967,
+  "model": "jev-1.14.0"
+ },
+ "p2318": {
+  "decision": "same",
+  "confidence": 0.43,
+  "probabilities": {
+   "same": 0.62,
+   "variant": 0.37,
+   "different": 0.01
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.89,
+  "same_window": 0.67,
+  "latency_ms": 145,
+  "input_tokens": 927,
+  "model": "jev-1.14.0"
+ },
+ "p2029": {
+  "decision": "variant",
+  "confidence": 0.97,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.98,
+   "different": 0.02
+  },
+  "same_subject": 0.1,
+  "same_terms": 0.11,
+  "same_window": 0.08,
+  "latency_ms": 224,
+  "input_tokens": 1125,
+  "model": "jev-1.14.0"
+ },
+ "p1651": {
+  "decision": "variant",
+  "confidence": 0.94,
+  "probabilities": {
+   "same": 0.03,
+   "variant": 0.96,
+   "different": 0.01
+  },
+  "same_subject": 0.96,
+  "same_terms": 0.33,
+  "same_window": 0.8,
+  "latency_ms": 247,
+  "input_tokens": 967,
+  "model": "jev-1.14.0"
+ },
+ "p0904": {
+  "decision": "different",
+  "confidence": 0.86,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.09,
+   "different": 0.91
+  },
+  "same_subject": 0.78,
+  "same_terms": 0.02,
+  "same_window": 0.08,
+  "latency_ms": 237,
+  "input_tokens": 1032,
+  "model": "jev-1.14.0"
+ },
+ "p1851": {
+  "decision": "different",
+  "confidence": 0.94,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.04,
+   "different": 0.96
+  },
+  "same_subject": 0.57,
+  "same_terms": 0.03,
+  "same_window": 0.57,
+  "latency_ms": 147,
+  "input_tokens": 1124,
+  "model": "jev-1.14.0"
+ },
+ "p1680": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.99,
+   "different": 0.01
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.48,
+  "same_window": 0.09,
+  "latency_ms": 139,
+  "input_tokens": 997,
+  "model": "jev-1.14.0"
+ },
+ "p0307": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.04,
+  "same_window": 0.63,
+  "latency_ms": 137,
+  "input_tokens": 1027,
+  "model": "jev-1.14.0"
+ },
+ "p1806": {
+  "decision": "different",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.01,
+   "different": 0.99
+  },
+  "same_subject": 0.01,
+  "same_terms": 0.03,
+  "same_window": 0.1,
+  "latency_ms": 151,
+  "input_tokens": 945,
+  "model": "jev-1.14.0"
+ },
+ "p2203": {
+  "decision": "variant",
+  "confidence": 0.48,
+  "probabilities": {
+   "same": 0.34,
+   "variant": 0.65,
+   "different": 0.01
+  },
+  "same_subject": 0.95,
+  "same_terms": 0.91,
+  "same_window": 0.88,
+  "latency_ms": 135,
+  "input_tokens": 934,
+  "model": "jev-1.14.0"
+ },
+ "p1242": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.02,
+  "same_window": 0.6,
+  "latency_ms": 135,
+  "input_tokens": 1005,
+  "model": "jev-1.14.0"
+ },
+ "p1052": {
+  "decision": "same",
+  "confidence": 0.26,
+  "probabilities": {
+   "same": 0.51,
+   "variant": 0.48,
+   "different": 0.01
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.84,
+  "same_window": 0.84,
+  "latency_ms": 129,
+  "input_tokens": 970,
+  "model": "jev-1.14.0"
+ },
+ "p1804": {
+  "decision": "variant",
+  "confidence": 0.92,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.95,
+   "different": 0.05
+  },
+  "same_subject": 0.32,
+  "same_terms": 0.08,
+  "same_window": 0.05,
+  "latency_ms": 140,
+  "input_tokens": 961,
+  "model": "jev-1.14.0"
+ },
+ "p1773": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.99,
+   "different": 0.01
+  },
+  "same_subject": 0.05,
+  "same_terms": 0.52,
+  "same_window": 0.81,
+  "latency_ms": 133,
+  "input_tokens": 1072,
+  "model": "jev-1.14.0"
+ },
+ "p0201": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.03,
+  "same_window": 0.13,
+  "latency_ms": 136,
+  "input_tokens": 845,
+  "model": "jev-1.14.0"
+ },
+ "p1870": {
+  "decision": "different",
+  "confidence": 0.73,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.18,
+   "different": 0.82
+  },
+  "same_subject": 0.06,
+  "same_terms": 0.64,
+  "same_window": 0.07,
+  "latency_ms": 143,
+  "input_tokens": 1063,
+  "model": "jev-1.14.0"
+ },
+ "p2386": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.23,
+  "same_window": 0.08,
+  "latency_ms": 130,
+  "input_tokens": 909,
+  "model": "jev-1.14.0"
+ },
+ "p0923": {
+  "decision": "different",
+  "confidence": 0.92,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.05,
+   "different": 0.95
+  },
+  "same_subject": 0.02,
+  "same_terms": 0.28,
+  "same_window": 0.55,
+  "latency_ms": 126,
+  "input_tokens": 941,
+  "model": "jev-1.14.0"
+ },
+ "p2004": {
+  "decision": "variant",
+  "confidence": 0.97,
+  "probabilities": {
+   "same": 0.01,
+   "variant": 0.98,
+   "different": 0.01
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.09,
+  "same_window": 0.69,
+  "latency_ms": 193,
+  "input_tokens": 1099,
+  "model": "jev-1.14.0"
+ },
+ "p0482": {
+  "decision": "different",
+  "confidence": 0.74,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.17,
+   "different": 0.83
+  },
+  "same_subject": 0.47,
+  "same_terms": 0.02,
+  "same_window": 0.08,
+  "latency_ms": 193,
+  "input_tokens": 1009,
+  "model": "jev-1.14.0"
+ },
+ "p1281": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.6,
+  "same_terms": 0.23,
+  "same_window": 0.17,
+  "latency_ms": 189,
+  "input_tokens": 1109,
+  "model": "jev-1.14.0"
+ },
+ "p0706": {
+  "decision": "same",
+  "confidence": 0.31,
+  "probabilities": {
+   "same": 0.54,
+   "variant": 0.45,
+   "different": 0.01
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.85,
+  "same_window": 0.85,
+  "latency_ms": 208,
+  "input_tokens": 964,
+  "model": "jev-1.14.0"
+ },
+ "p1177": {
+  "decision": "variant",
+  "confidence": 0.92,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.95,
+   "different": 0.05
+  },
+  "same_subject": 0.91,
+  "same_terms": 0.07,
+  "same_window": 0.1,
+  "latency_ms": 181,
+  "input_tokens": 894,
+  "model": "jev-1.14.0"
+ },
+ "p0442": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.04,
+  "same_window": 0.65,
+  "latency_ms": 193,
+  "input_tokens": 1036,
+  "model": "jev-1.14.0"
+ },
+ "p0507": {
+  "decision": "variant",
+  "confidence": 0.76,
+  "probabilities": {
+   "same": 0.15,
+   "variant": 0.84,
+   "different": 0.01
+  },
+  "same_subject": 0.8,
+  "same_terms": 0.81,
+  "same_window": 0.85,
+  "latency_ms": 180,
+  "input_tokens": 1164,
+  "model": "jev-1.14.0"
+ },
+ "p1170": {
+  "decision": "different",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.0,
+   "different": 1.0
+  },
+  "same_subject": 0.61,
+  "same_terms": 0.02,
+  "same_window": 0.13,
+  "latency_ms": 180,
+  "input_tokens": 1013,
+  "model": "jev-1.14.0"
+ },
+ "p1881": {
+  "decision": "different",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.0,
+   "different": 1.0
+  },
+  "same_subject": 0.02,
+  "same_terms": 0.02,
+  "same_window": 0.69,
+  "latency_ms": 138,
+  "input_tokens": 988,
+  "model": "jev-1.14.0"
+ },
+ "p1328": {
+  "decision": "different",
+  "confidence": 0.92,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.05,
+   "different": 0.95
+  },
+  "same_subject": 0.34,
+  "same_terms": 0.02,
+  "same_window": 0.81,
+  "latency_ms": 141,
+  "input_tokens": 1039,
+  "model": "jev-1.14.0"
+ },
+ "p1067": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.35,
+  "same_window": 0.09,
+  "latency_ms": 155,
+  "input_tokens": 968,
+  "model": "jev-1.14.0"
+ },
+ "p1293": {
+  "decision": "different",
+  "confidence": 0.97,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.02,
+   "different": 0.98
+  },
+  "same_subject": 0.11,
+  "same_terms": 0.08,
+  "same_window": 0.93,
+  "latency_ms": 177,
+  "input_tokens": 974,
+  "model": "jev-1.14.0"
+ },
+ "p2287": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.81,
+  "same_terms": 0.03,
+  "same_window": 0.51,
+  "latency_ms": 134,
+  "input_tokens": 1109,
+  "model": "jev-1.14.0"
+ },
+ "p0072": {
+  "decision": "variant",
+  "confidence": 0.92,
+  "probabilities": {
+   "same": 0.04,
+   "variant": 0.95,
+   "different": 0.01
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.48,
+  "same_window": 0.77,
+  "latency_ms": 219,
+  "input_tokens": 1122,
+  "model": "jev-1.14.0"
+ },
+ "p1450": {
+  "decision": "variant",
+  "confidence": 0.97,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.98,
+   "different": 0.02
+  },
+  "same_subject": 0.06,
+  "same_terms": 0.31,
+  "same_window": 0.12,
+  "latency_ms": 162,
+  "input_tokens": 1013,
+  "model": "jev-1.14.0"
+ },
+ "p0354": {
+  "decision": "variant",
+  "confidence": 0.5,
+  "probabilities": {
+   "same": 0.32,
+   "variant": 0.67,
+   "different": 0.01
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.88,
+  "same_window": 0.73,
+  "latency_ms": 154,
+  "input_tokens": 938,
+  "model": "jev-1.14.0"
+ },
+ "p0386": {
+  "decision": "same",
+  "confidence": 0.31,
+  "probabilities": {
+   "same": 0.54,
+   "variant": 0.45,
+   "different": 0.01
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.85,
+  "same_window": 0.83,
+  "latency_ms": 157,
+  "input_tokens": 967,
+  "model": "jev-1.14.0"
+ },
+ "p0304": {
+  "decision": "variant",
+  "confidence": 0.35,
+  "probabilities": {
+   "same": 0.42,
+   "variant": 0.57,
+   "different": 0.01
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.89,
+  "same_window": 0.68,
+  "latency_ms": 136,
+  "input_tokens": 938,
+  "model": "jev-1.14.0"
+ },
+ "p1688": {
+  "decision": "different",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.0,
+   "different": 1.0
+  },
+  "same_subject": 0.1,
+  "same_terms": 0.02,
+  "same_window": 0.07,
+  "latency_ms": 158,
+  "input_tokens": 1079,
+  "model": "jev-1.14.0"
+ },
+ "p0282": {
+  "decision": "variant",
+  "confidence": 0.49,
+  "probabilities": {
+   "same": 0.33,
+   "variant": 0.66,
+   "different": 0.01
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.91,
+  "same_window": 0.67,
+  "latency_ms": 177,
+  "input_tokens": 932,
+  "model": "jev-1.14.0"
+ },
+ "p2402": {
+  "decision": "different",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.01,
+   "different": 0.99
+  },
+  "same_subject": 0.01,
+  "same_terms": 0.28,
+  "same_window": 0.26,
+  "latency_ms": 168,
+  "input_tokens": 975,
+  "model": "jev-1.14.0"
+ },
+ "p0409": {
+  "decision": "variant",
+  "confidence": 0.97,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.98,
+   "different": 0.02
+  },
+  "same_subject": 0.08,
+  "same_terms": 0.24,
+  "same_window": 0.11,
+  "latency_ms": 167,
+  "input_tokens": 1016,
+  "model": "jev-1.14.0"
+ },
+ "p0363": {
+  "decision": "variant",
+  "confidence": 0.42,
+  "probabilities": {
+   "same": 0.38,
+   "variant": 0.61,
+   "different": 0.01
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.89,
+  "same_window": 0.72,
+  "latency_ms": 244,
+  "input_tokens": 938,
+  "model": "jev-1.14.0"
+ },
+ "p1072": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.01,
+   "variant": 0.99,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.21,
+  "same_window": 0.15,
+  "latency_ms": 224,
+  "input_tokens": 1083,
+  "model": "jev-1.14.0"
+ },
+ "p0012": {
+  "decision": "variant",
+  "confidence": 0.43,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.62,
+   "different": 0.38
+  },
+  "same_subject": 0.13,
+  "same_terms": 0.02,
+  "same_window": 0.47,
+  "latency_ms": 280,
+  "input_tokens": 842,
+  "model": "jev-1.14.0"
+ },
+ "p1731": {
+  "decision": "variant",
+  "confidence": 0.74,
+  "probabilities": {
+   "same": 0.16,
+   "variant": 0.83,
+   "different": 0.01
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.56,
+  "same_window": 0.28,
+  "latency_ms": 225,
+  "input_tokens": 1080,
+  "model": "jev-1.14.0"
+ },
+ "p1046": {
+  "decision": "variant",
+  "confidence": 0.96,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.97,
+   "different": 0.03
+  },
+  "same_subject": 0.91,
+  "same_terms": 0.07,
+  "same_window": 0.1,
+  "latency_ms": 228,
+  "input_tokens": 895,
+  "model": "jev-1.14.0"
+ },
+ "p1273": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.99,
+   "different": 0.01
+  },
+  "same_subject": 0.63,
+  "same_terms": 0.17,
+  "same_window": 0.05,
+  "latency_ms": 239,
+  "input_tokens": 1044,
+  "model": "jev-1.14.0"
+ },
+ "p1704": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.13,
+  "same_window": 0.53,
+  "latency_ms": 151,
+  "input_tokens": 1023,
+  "model": "jev-1.14.0"
+ },
+ "p0435": {
+  "decision": "different",
+  "confidence": 0.8,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.13,
+   "different": 0.87
+  },
+  "same_subject": 0.67,
+  "same_terms": 0.02,
+  "same_window": 0.07,
+  "latency_ms": 134,
+  "input_tokens": 1023,
+  "model": "jev-1.14.0"
+ },
+ "p1960": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.01,
+   "variant": 0.99,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.23,
+  "same_window": 0.18,
+  "latency_ms": 171,
+  "input_tokens": 1080,
+  "model": "jev-1.14.0"
+ },
+ "p0456": {
+  "decision": "different",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.0,
+   "different": 1.0
+  },
+  "same_subject": 0.04,
+  "same_terms": 0.1,
+  "same_window": 0.1,
+  "latency_ms": 146,
+  "input_tokens": 929,
+  "model": "jev-1.14.0"
+ },
+ "p0175": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.03,
+  "same_window": 0.15,
+  "latency_ms": 142,
+  "input_tokens": 845,
+  "model": "jev-1.14.0"
+ },
+ "p1942": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.99,
+   "different": 0.01
+  },
+  "same_subject": 0.7,
+  "same_terms": 0.03,
+  "same_window": 0.05,
+  "latency_ms": 133,
+  "input_tokens": 1045,
+  "model": "jev-1.14.0"
+ },
+ "p0428": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.99,
+   "different": 0.01
+  },
+  "same_subject": 0.96,
+  "same_terms": 0.27,
+  "same_window": 0.16,
+  "latency_ms": 144,
+  "input_tokens": 1017,
+  "model": "jev-1.14.0"
+ },
+ "p0410": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.03,
+  "same_window": 0.13,
+  "latency_ms": 145,
+  "input_tokens": 851,
+  "model": "jev-1.14.0"
+ },
+ "p0957": {
+  "decision": "different",
+  "confidence": 0.94,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.04,
+   "different": 0.96
+  },
+  "same_subject": 0.51,
+  "same_terms": 0.04,
+  "same_window": 0.25,
+  "latency_ms": 190,
+  "input_tokens": 934,
+  "model": "jev-1.14.0"
+ },
+ "p1764": {
+  "decision": "different",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.01,
+   "different": 0.99
+  },
+  "same_subject": 0.68,
+  "same_terms": 0.01,
+  "same_window": 0.1,
+  "latency_ms": 189,
+  "input_tokens": 1032,
+  "model": "jev-1.14.0"
+ },
+ "p2397": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.01,
+   "variant": 0.99,
+   "different": 0.0
+  },
+  "same_subject": 0.92,
+  "same_terms": 0.27,
+  "same_window": 0.12,
+  "latency_ms": 208,
+  "input_tokens": 932,
+  "model": "jev-1.14.0"
+ },
+ "p1913": {
+  "decision": "variant",
+  "confidence": 0.73,
+  "probabilities": {
+   "same": 0.17,
+   "variant": 0.82,
+   "different": 0.01
+  },
+  "same_subject": 0.99,
+  "same_terms": 0.72,
+  "same_window": 0.89,
+  "latency_ms": 188,
+  "input_tokens": 1074,
+  "model": "jev-1.14.0"
+ },
+ "p1917": {
+  "decision": "variant",
+  "confidence": 0.4,
+  "probabilities": {
+   "same": 0.39,
+   "variant": 0.6,
+   "different": 0.01
+  },
+  "same_subject": 0.83,
+  "same_terms": 0.81,
+  "same_window": 0.86,
+  "latency_ms": 170,
+  "input_tokens": 917,
+  "model": "jev-1.14.0"
+ },
+ "p1099": {
+  "decision": "variant",
+  "confidence": 0.37,
+  "probabilities": {
+   "same": 0.41,
+   "variant": 0.58,
+   "different": 0.01
+  },
+  "same_subject": 0.91,
+  "same_terms": 0.84,
+  "same_window": 0.87,
+  "latency_ms": 182,
+  "input_tokens": 918,
+  "model": "jev-1.14.0"
+ },
+ "p1115": {
+  "decision": "variant",
+  "confidence": 0.83,
+  "probabilities": {
+   "same": 0.09,
+   "variant": 0.89,
+   "different": 0.02
+  },
+  "same_subject": 0.93,
+  "same_terms": 0.44,
+  "same_window": 0.59,
+  "latency_ms": 128,
+  "input_tokens": 1061,
+  "model": "jev-1.14.0"
+ },
+ "p0658": {
+  "decision": "different",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.0,
+   "different": 1.0
+  },
+  "same_subject": 0.15,
+  "same_terms": 0.02,
+  "same_window": 0.06,
+  "latency_ms": 175,
+  "input_tokens": 951,
+  "model": "jev-1.14.0"
+ },
+ "p2119": {
+  "decision": "variant",
+  "confidence": 0.96,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.97,
+   "different": 0.03
+  },
+  "same_subject": 0.92,
+  "same_terms": 0.06,
+  "same_window": 0.31,
+  "latency_ms": 130,
+  "input_tokens": 1052,
+  "model": "jev-1.14.0"
+ },
+ "p0300": {
+  "decision": "variant",
+  "confidence": 0.97,
+  "probabilities": {
+   "same": 0.01,
+   "variant": 0.98,
+   "different": 0.01
+  },
+  "same_subject": 0.96,
+  "same_terms": 0.28,
+  "same_window": 0.16,
+  "latency_ms": 171,
+  "input_tokens": 1023,
+  "model": "jev-1.14.0"
+ },
+ "p1127": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.03,
+  "same_window": 0.6,
+  "latency_ms": 167,
+  "input_tokens": 1013,
+  "model": "jev-1.14.0"
+ },
+ "p1111": {
+  "decision": "different",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.0,
+   "different": 1.0
+  },
+  "same_subject": 0.68,
+  "same_terms": 0.02,
+  "same_window": 0.11,
+  "latency_ms": 158,
+  "input_tokens": 1017,
+  "model": "jev-1.14.0"
+ },
+ "p0196": {
+  "decision": "variant",
+  "confidence": 0.92,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.95,
+   "different": 0.05
+  },
+  "same_subject": 0.96,
+  "same_terms": 0.03,
+  "same_window": 0.82,
+  "latency_ms": 185,
+  "input_tokens": 1016,
+  "model": "jev-1.14.0"
+ },
+ "p0646": {
+  "decision": "different",
+  "confidence": 0.86,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.09,
+   "different": 0.91
+  },
+  "same_subject": 0.02,
+  "same_terms": 0.3,
+  "same_window": 0.56,
+  "latency_ms": 164,
+  "input_tokens": 943,
+  "model": "jev-1.14.0"
+ },
+ "p1370": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.99,
+   "different": 0.01
+  },
+  "same_subject": 0.72,
+  "same_terms": 0.03,
+  "same_window": 0.07,
+  "latency_ms": 148,
+  "input_tokens": 1159,
+  "model": "jev-1.14.0"
+ },
+ "p1164": {
+  "decision": "variant",
+  "confidence": 0.3,
+  "probabilities": {
+   "same": 0.46,
+   "variant": 0.53,
+   "different": 0.01
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.86,
+  "same_window": 0.9,
+  "latency_ms": 139,
+  "input_tokens": 941,
+  "model": "jev-1.14.0"
+ },
+ "p1084": {
+  "decision": "different",
+  "confidence": 0.89,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.07,
+   "different": 0.93
+  },
+  "same_subject": 0.02,
+  "same_terms": 0.24,
+  "same_window": 0.1,
+  "latency_ms": 156,
+  "input_tokens": 1007,
+  "model": "jev-1.14.0"
+ },
+ "p1379": {
+  "decision": "variant",
+  "confidence": 0.92,
+  "probabilities": {
+   "same": 0.05,
+   "variant": 0.95,
+   "different": 0.0
+  },
+  "same_subject": 0.79,
+  "same_terms": 0.44,
+  "same_window": 0.89,
+  "latency_ms": 155,
+  "input_tokens": 847,
+  "model": "jev-1.14.0"
+ },
+ "p1618": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.68,
+  "same_terms": 0.04,
+  "same_window": 0.05,
+  "latency_ms": 196,
+  "input_tokens": 1045,
+  "model": "jev-1.14.0"
+ },
+ "p1455": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.01,
+   "variant": 0.99,
+   "different": 0.0
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.14,
+  "same_window": 0.16,
+  "latency_ms": 195,
+  "input_tokens": 969,
+  "model": "jev-1.14.0"
+ },
+ "p1048": {
+  "decision": "variant",
+  "confidence": 0.91,
+  "probabilities": {
+   "same": 0.05,
+   "variant": 0.94,
+   "different": 0.01
+  },
+  "same_subject": 0.94,
+  "same_terms": 0.33,
+  "same_window": 0.92,
+  "latency_ms": 176,
+  "input_tokens": 1007,
+  "model": "jev-1.14.0"
+ },
+ "p0919": {
+  "decision": "variant",
+  "confidence": 0.38,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.59,
+   "different": 0.41
+  },
+  "same_subject": 0.71,
+  "same_terms": 0.64,
+  "same_window": 0.21,
+  "latency_ms": 276,
+  "input_tokens": 1095,
+  "model": "jev-1.14.0"
+ },
+ "p1945": {
+  "decision": "different",
+  "confidence": 0.94,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.04,
+   "different": 0.96
+  },
+  "same_subject": 0.02,
+  "same_terms": 0.25,
+  "same_window": 0.1,
+  "latency_ms": 320,
+  "input_tokens": 1003,
+  "model": "jev-1.14.0"
+ },
+ "p0263": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.03,
+  "same_window": 0.3,
+  "latency_ms": 310,
+  "input_tokens": 973,
+  "model": "jev-1.14.0"
+ },
+ "p1124": {
+  "decision": "variant",
+  "confidence": 0.92,
+  "probabilities": {
+   "same": 0.05,
+   "variant": 0.95,
+   "different": 0.0
+  },
+  "same_subject": 0.82,
+  "same_terms": 0.44,
+  "same_window": 0.88,
+  "latency_ms": 208,
+  "input_tokens": 857,
+  "model": "jev-1.14.0"
+ },
+ "p0556": {
+  "decision": "different",
+  "confidence": 0.85,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.1,
+   "different": 0.9
+  },
+  "same_subject": 0.69,
+  "same_terms": 0.02,
+  "same_window": 0.07,
+  "latency_ms": 234,
+  "input_tokens": 1020,
+  "model": "jev-1.14.0"
+ },
+ "p1649": {
+  "decision": "different",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.0,
+   "different": 1.0
+  },
+  "same_subject": 0.52,
+  "same_terms": 0.01,
+  "same_window": 0.06,
+  "latency_ms": 193,
+  "input_tokens": 1120,
+  "model": "jev-1.14.0"
+ },
+ "p0586": {
+  "decision": "variant",
+  "confidence": 0.3,
+  "probabilities": {
+   "same": 0.46,
+   "variant": 0.53,
+   "different": 0.01
+  },
+  "same_subject": 0.87,
+  "same_terms": 0.82,
+  "same_window": 0.89,
+  "latency_ms": 136,
+  "input_tokens": 918,
+  "model": "jev-1.14.0"
+ },
+ "p0989": {
+  "decision": "different",
+  "confidence": 0.31,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.46,
+   "different": 0.54
+  },
+  "same_subject": 0.95,
+  "same_terms": 0.03,
+  "same_window": 0.08,
+  "latency_ms": 185,
+  "input_tokens": 1124,
+  "model": "jev-1.14.0"
+ },
+ "p1715": {
+  "decision": "variant",
+  "confidence": 0.83,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.89,
+   "different": 0.11
+  },
+  "same_subject": 0.84,
+  "same_terms": 0.04,
+  "same_window": 0.91,
+  "latency_ms": 167,
+  "input_tokens": 990,
+  "model": "jev-1.14.0"
+ },
+ "p0632": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.05,
+  "same_terms": 0.38,
+  "same_window": 0.81,
+  "latency_ms": 176,
+  "input_tokens": 917,
+  "model": "jev-1.14.0"
+ },
+ "p1713": {
+  "decision": "different",
+  "confidence": 0.96,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.03,
+   "different": 0.97
+  },
+  "same_subject": 0.09,
+  "same_terms": 0.04,
+  "same_window": 0.11,
+  "latency_ms": 149,
+  "input_tokens": 1039,
+  "model": "jev-1.14.0"
+ },
+ "p1614": {
+  "decision": "different",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.01,
+   "different": 0.99
+  },
+  "same_subject": 0.01,
+  "same_terms": 0.34,
+  "same_window": 0.29,
+  "latency_ms": 181,
+  "input_tokens": 971,
+  "model": "jev-1.14.0"
+ },
+ "p1950": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.05,
+  "same_terms": 0.29,
+  "same_window": 0.71,
+  "latency_ms": 182,
+  "input_tokens": 938,
+  "model": "jev-1.14.0"
+ },
+ "p0654": {
+  "decision": "variant",
+  "confidence": 0.79,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.86,
+   "different": 0.14
+  },
+  "same_subject": 0.64,
+  "same_terms": 0.03,
+  "same_window": 0.12,
+  "latency_ms": 166,
+  "input_tokens": 1020,
+  "model": "jev-1.14.0"
+ },
+ "p1601": {
+  "decision": "variant",
+  "confidence": 0.96,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.97,
+   "different": 0.03
+  },
+  "same_subject": 0.93,
+  "same_terms": 0.08,
+  "same_window": 0.08,
+  "latency_ms": 186,
+  "input_tokens": 893,
+  "model": "jev-1.14.0"
+ },
+ "p1591": {
+  "decision": "variant",
+  "confidence": 0.94,
+  "probabilities": {
+   "same": 0.03,
+   "variant": 0.96,
+   "different": 0.01
+  },
+  "same_subject": 0.96,
+  "same_terms": 0.3,
+  "same_window": 0.84,
+  "latency_ms": 173,
+  "input_tokens": 973,
+  "model": "jev-1.14.0"
+ },
+ "p0664": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.99,
+   "different": 0.01
+  },
+  "same_subject": 0.58,
+  "same_terms": 0.03,
+  "same_window": 0.05,
+  "latency_ms": 173,
+  "input_tokens": 1167,
+  "model": "jev-1.14.0"
+ },
+ "p1916": {
+  "decision": "variant",
+  "confidence": 0.86,
+  "probabilities": {
+   "same": 0.09,
+   "variant": 0.91,
+   "different": 0.0
+  },
+  "same_subject": 0.99,
+  "same_terms": 0.57,
+  "same_window": 0.48,
+  "latency_ms": 153,
+  "input_tokens": 1032,
+  "model": "jev-1.14.0"
+ },
+ "p1820": {
+  "decision": "variant",
+  "confidence": 0.94,
+  "probabilities": {
+   "same": 0.03,
+   "variant": 0.96,
+   "different": 0.01
+  },
+  "same_subject": 0.53,
+  "same_terms": 0.22,
+  "same_window": 0.8,
+  "latency_ms": 173,
+  "input_tokens": 1054,
+  "model": "jev-1.14.0"
+ },
+ "p0587": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.03,
+  "same_terms": 0.3,
+  "same_window": 0.82,
+  "latency_ms": 163,
+  "input_tokens": 918,
+  "model": "jev-1.14.0"
+ },
+ "p0207": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.04,
+  "same_window": 0.49,
+  "latency_ms": 127,
+  "input_tokens": 870,
+  "model": "jev-1.14.0"
+ },
+ "p1726": {
+  "decision": "different",
+  "confidence": 0.88,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.08,
+   "different": 0.92
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.03,
+  "same_window": 0.19,
+  "latency_ms": 131,
+  "input_tokens": 1004,
+  "model": "jev-1.14.0"
+ },
+ "p0780": {
+  "decision": "variant",
+  "confidence": 0.97,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.98,
+   "different": 0.02
+  },
+  "same_subject": 0.8,
+  "same_terms": 0.03,
+  "same_window": 0.62,
+  "latency_ms": 162,
+  "input_tokens": 1004,
+  "model": "jev-1.14.0"
+ },
+ "p0845": {
+  "decision": "different",
+  "confidence": 0.43,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.38,
+   "different": 0.62
+  },
+  "same_subject": 0.95,
+  "same_terms": 0.04,
+  "same_window": 0.53,
+  "latency_ms": 162,
+  "input_tokens": 952,
+  "model": "jev-1.14.0"
+ },
+ "p1954": {
+  "decision": "variant",
+  "confidence": 0.7,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.8,
+   "different": 0.2
+  },
+  "same_subject": 0.09,
+  "same_terms": 0.49,
+  "same_window": 0.16,
+  "latency_ms": 132,
+  "input_tokens": 1110,
+  "model": "jev-1.14.0"
+ },
+ "p0324": {
+  "decision": "variant",
+  "confidence": 0.46,
+  "probabilities": {
+   "same": 0.35,
+   "variant": 0.64,
+   "different": 0.01
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.9,
+  "same_window": 0.66,
+  "latency_ms": 180,
+  "input_tokens": 935,
+  "model": "jev-1.14.0"
+ },
+ "p1720": {
+  "decision": "different",
+  "confidence": 0.86,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.09,
+   "different": 0.91
+  },
+  "same_subject": 0.02,
+  "same_terms": 0.4,
+  "same_window": 0.09,
+  "latency_ms": 164,
+  "input_tokens": 984,
+  "model": "jev-1.14.0"
+ },
+ "p2267": {
+  "decision": "same",
+  "confidence": 0.62,
+  "probabilities": {
+   "same": 0.75,
+   "variant": 0.24,
+   "different": 0.01
+  },
+  "same_subject": 0.29,
+  "same_terms": 0.92,
+  "same_window": 0.94,
+  "latency_ms": 184,
+  "input_tokens": 1076,
+  "model": "jev-1.14.0"
+ },
+ "p2073": {
+  "decision": "variant",
+  "confidence": 0.97,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.98,
+   "different": 0.02
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.06,
+  "same_window": 0.16,
+  "latency_ms": 146,
+  "input_tokens": 1110,
+  "model": "jev-1.14.0"
+ },
+ "p2379": {
+  "decision": "variant",
+  "confidence": 0.34,
+  "probabilities": {
+   "same": 0.43,
+   "variant": 0.56,
+   "different": 0.01
+  },
+  "same_subject": 0.88,
+  "same_terms": 0.84,
+  "same_window": 0.59,
+  "latency_ms": 126,
+  "input_tokens": 1027,
+  "model": "jev-1.14.0"
+ },
+ "p1665": {
+  "decision": "variant",
+  "confidence": 0.97,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.98,
+   "different": 0.02
+  },
+  "same_subject": 0.1,
+  "same_terms": 0.05,
+  "same_window": 0.26,
+  "latency_ms": 146,
+  "input_tokens": 1145,
+  "model": "jev-1.14.0"
+ },
+ "p0268": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.03,
+  "same_terms": 0.49,
+  "same_window": 0.68,
+  "latency_ms": 227,
+  "input_tokens": 935,
+  "model": "jev-1.14.0"
+ },
+ "p0722": {
+  "decision": "variant",
+  "confidence": 0.28,
+  "probabilities": {
+   "same": 0.47,
+   "variant": 0.52,
+   "different": 0.01
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.83,
+  "same_window": 0.84,
+  "latency_ms": 214,
+  "input_tokens": 964,
+  "model": "jev-1.14.0"
+ },
+ "p0429": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.99,
+   "different": 0.01
+  },
+  "same_subject": 0.07,
+  "same_terms": 0.26,
+  "same_window": 0.16,
+  "latency_ms": 207,
+  "input_tokens": 1017,
+  "model": "jev-1.14.0"
+ },
+ "p2328": {
+  "decision": "different",
+  "confidence": 0.76,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.16,
+   "different": 0.84
+  },
+  "same_subject": 0.02,
+  "same_terms": 0.33,
+  "same_window": 0.56,
+  "latency_ms": 201,
+  "input_tokens": 942,
+  "model": "jev-1.14.0"
+ },
+ "p0693": {
+  "decision": "variant",
+  "confidence": 0.73,
+  "probabilities": {
+   "same": 0.01,
+   "variant": 0.82,
+   "different": 0.17
+  },
+  "same_subject": 0.05,
+  "same_terms": 0.28,
+  "same_window": 0.6,
+  "latency_ms": 194,
+  "input_tokens": 968,
+  "model": "jev-1.14.0"
+ },
+ "p1929": {
+  "decision": "variant",
+  "confidence": 0.35,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.57,
+   "different": 0.43
+  },
+  "same_subject": 0.4,
+  "same_terms": 0.09,
+  "same_window": 0.08,
+  "latency_ms": 194,
+  "input_tokens": 926,
+  "model": "jev-1.14.0"
+ },
+ "p2028": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.99,
+   "different": 0.01
+  },
+  "same_subject": 0.72,
+  "same_terms": 0.03,
+  "same_window": 0.07,
+  "latency_ms": 167,
+  "input_tokens": 1045,
+  "model": "jev-1.14.0"
+ },
+ "p0603": {
+  "decision": "different",
+  "confidence": 0.85,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.1,
+   "different": 0.9
+  },
+  "same_subject": 0.72,
+  "same_terms": 0.02,
+  "same_window": 0.07,
+  "latency_ms": 167,
+  "input_tokens": 1017,
+  "model": "jev-1.14.0"
+ },
+ "p0885": {
+  "decision": "variant",
+  "confidence": 0.97,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.98,
+   "different": 0.02
+  },
+  "same_subject": 0.09,
+  "same_terms": 0.08,
+  "same_window": 0.87,
+  "latency_ms": 165,
+  "input_tokens": 884,
+  "model": "jev-1.14.0"
+ },
+ "p1579": {
+  "decision": "different",
+  "confidence": 0.88,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.08,
+   "different": 0.92
+  },
+  "same_subject": 0.12,
+  "same_terms": 0.02,
+  "same_window": 0.06,
+  "latency_ms": 171,
+  "input_tokens": 1159,
+  "model": "jev-1.14.0"
+ },
+ "p0211": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.02,
+  "same_window": 0.35,
+  "latency_ms": 185,
+  "input_tokens": 973,
+  "model": "jev-1.14.0"
+ },
+ "p0115": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.03,
+  "same_window": 0.14,
+  "latency_ms": 142,
+  "input_tokens": 848,
+  "model": "jev-1.14.0"
+ },
+ "p1597": {
+  "decision": "variant",
+  "confidence": 0.92,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.95,
+   "different": 0.05
+  },
+  "same_subject": 0.92,
+  "same_terms": 0.09,
+  "same_window": 0.08,
+  "latency_ms": 159,
+  "input_tokens": 895,
+  "model": "jev-1.14.0"
+ },
+ "p2277": {
+  "decision": "different",
+  "confidence": 0.8,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.13,
+   "different": 0.87
+  },
+  "same_subject": 0.05,
+  "same_terms": 0.63,
+  "same_window": 0.07,
+  "latency_ms": 141,
+  "input_tokens": 1063,
+  "model": "jev-1.14.0"
+ },
+ "p0430": {
+  "decision": "different",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.0,
+   "different": 1.0
+  },
+  "same_subject": 0.49,
+  "same_terms": 0.01,
+  "same_window": 0.08,
+  "latency_ms": 205,
+  "input_tokens": 1120,
+  "model": "jev-1.14.0"
+ },
+ "p1407": {
+  "decision": "variant",
+  "confidence": 0.33,
+  "probabilities": {
+   "same": 0.44,
+   "variant": 0.55,
+   "different": 0.01
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.94,
+  "same_window": 0.66,
+  "latency_ms": 216,
+  "input_tokens": 966,
+  "model": "jev-1.14.0"
+ },
+ "p0636": {
+  "decision": "different",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.0,
+   "different": 1.0
+  },
+  "same_subject": 0.27,
+  "same_terms": 0.01,
+  "same_window": 0.15,
+  "latency_ms": 212,
+  "input_tokens": 1103,
+  "model": "jev-1.14.0"
+ },
+ "p1620": {
+  "decision": "variant",
+  "confidence": 0.94,
+  "probabilities": {
+   "same": 0.03,
+   "variant": 0.96,
+   "different": 0.01
+  },
+  "same_subject": 0.96,
+  "same_terms": 0.37,
+  "same_window": 0.83,
+  "latency_ms": 185,
+  "input_tokens": 969,
+  "model": "jev-1.14.0"
+ },
+ "p2297": {
+  "decision": "different",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.0,
+   "different": 1.0
+  },
+  "same_subject": 0.02,
+  "same_terms": 0.04,
+  "same_window": 0.45,
+  "latency_ms": 162,
+  "input_tokens": 949,
+  "model": "jev-1.14.0"
+ },
+ "p1056": {
+  "decision": "variant",
+  "confidence": 0.7,
+  "probabilities": {
+   "same": 0.19,
+   "variant": 0.8,
+   "different": 0.01
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.77,
+  "same_window": 0.91,
+  "latency_ms": 158,
+  "input_tokens": 1141,
+  "model": "jev-1.14.0"
+ },
+ "p2025": {
+  "decision": "different",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.0,
+   "different": 1.0
+  },
+  "same_subject": 0.02,
+  "same_terms": 0.04,
+  "same_window": 0.82,
+  "latency_ms": 205,
+  "input_tokens": 1116,
+  "model": "jev-1.14.0"
+ },
+ "p1454": {
+  "decision": "variant",
+  "confidence": 0.94,
+  "probabilities": {
+   "same": 0.03,
+   "variant": 0.96,
+   "different": 0.01
+  },
+  "same_subject": 0.97,
+  "same_terms": 0.39,
+  "same_window": 0.85,
+  "latency_ms": 176,
+  "input_tokens": 967,
+  "model": "jev-1.14.0"
+ },
+ "p0562": {
+  "decision": "different",
+  "confidence": 0.97,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.02,
+   "different": 0.98
+  },
+  "same_subject": 0.34,
+  "same_terms": 0.02,
+  "same_window": 0.06,
+  "latency_ms": 295,
+  "input_tokens": 992,
+  "model": "jev-1.14.0"
+ },
+ "p0002": {
+  "decision": "different",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.0,
+   "different": 1.0
+  },
+  "same_subject": 0.04,
+  "same_terms": 0.02,
+  "same_window": 0.75,
+  "latency_ms": 200,
+  "input_tokens": 1027,
+  "model": "jev-1.14.0"
+ },
+ "p1131": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.03,
+  "same_window": 0.39,
+  "latency_ms": 141,
+  "input_tokens": 1018,
+  "model": "jev-1.14.0"
+ },
+ "p0212": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.04,
+  "same_window": 0.13,
+  "latency_ms": 148,
+  "input_tokens": 851,
+  "model": "jev-1.14.0"
+ },
+ "p1816": {
+  "decision": "variant",
+  "confidence": 0.77,
+  "probabilities": {
+   "same": 0.14,
+   "variant": 0.85,
+   "different": 0.01
+  },
+  "same_subject": 0.93,
+  "same_terms": 0.27,
+  "same_window": 0.96,
+  "latency_ms": 156,
+  "input_tokens": 962,
+  "model": "jev-1.14.0"
+ },
+ "p2110": {
+  "decision": "variant",
+  "confidence": 0.97,
+  "probabilities": {
+   "same": 0.01,
+   "variant": 0.98,
+   "different": 0.01
+  },
+  "same_subject": 0.06,
+  "same_terms": 0.54,
+  "same_window": 0.44,
+  "latency_ms": 135,
+  "input_tokens": 917,
+  "model": "jev-1.14.0"
+ },
+ "p0306": {
+  "decision": "variant",
+  "confidence": 0.43,
+  "probabilities": {
+   "same": 0.37,
+   "variant": 0.62,
+   "different": 0.01
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.91,
+  "same_window": 0.65,
+  "latency_ms": 138,
+  "input_tokens": 932,
+  "model": "jev-1.14.0"
+ },
+ "p0541": {
+  "decision": "different",
+  "confidence": 0.79,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.14,
+   "different": 0.86
+  },
+  "same_subject": 0.66,
+  "same_terms": 0.02,
+  "same_window": 0.08,
+  "latency_ms": 127,
+  "input_tokens": 1018,
+  "model": "jev-1.14.0"
+ },
+ "p0538": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.03,
+  "same_terms": 0.58,
+  "same_window": 0.7,
+  "latency_ms": 156,
+  "input_tokens": 934,
+  "model": "jev-1.14.0"
+ },
+ "p0881": {
+  "decision": "variant",
+  "confidence": 0.55,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.7,
+   "different": 0.3
+  },
+  "same_subject": 0.78,
+  "same_terms": 0.06,
+  "same_window": 0.59,
+  "latency_ms": 132,
+  "input_tokens": 1111,
+  "model": "jev-1.14.0"
+ },
+ "p0502": {
+  "decision": "same",
+  "confidence": 0.76,
+  "probabilities": {
+   "same": 0.84,
+   "variant": 0.16,
+   "different": 0.0
+  },
+  "same_subject": 0.99,
+  "same_terms": 0.91,
+  "same_window": 0.89,
+  "latency_ms": 141,
+  "input_tokens": 834,
+  "model": "jev-1.14.0"
+ },
+ "p1765": {
+  "decision": "variant",
+  "confidence": 0.96,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.97,
+   "different": 0.03
+  },
+  "same_subject": 0.19,
+  "same_terms": 0.21,
+  "same_window": 0.06,
+  "latency_ms": 210,
+  "input_tokens": 926,
+  "model": "jev-1.14.0"
+ },
+ "p1404": {
+  "decision": "different",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.01,
+   "different": 0.99
+  },
+  "same_subject": 0.01,
+  "same_terms": 0.13,
+  "same_window": 0.79,
+  "latency_ms": 178,
+  "input_tokens": 917,
+  "model": "jev-1.14.0"
+ },
+ "p1249": {
+  "decision": "different",
+  "confidence": 0.79,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.14,
+   "different": 0.86
+  },
+  "same_subject": 0.02,
+  "same_terms": 0.24,
+  "same_window": 0.54,
+  "latency_ms": 203,
+  "input_tokens": 945,
+  "model": "jev-1.14.0"
+ },
+ "p0555": {
+  "decision": "variant",
+  "confidence": 0.98,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 0.99,
+   "different": 0.01
+  },
+  "same_subject": 0.7,
+  "same_terms": 0.05,
+  "same_window": 0.2,
+  "latency_ms": 143,
+  "input_tokens": 1055,
+  "model": "jev-1.14.0"
+ },
+ "p0355": {
+  "decision": "variant",
+  "confidence": 1.0,
+  "probabilities": {
+   "same": 0.0,
+   "variant": 1.0,
+   "different": 0.0
+  },
+  "same_subject": 0.98,
+  "same_terms": 0.04,
+  "same_window": 0.62,
+  "latency_ms": 267,
+  "input_tokens": 1033,
+  "model": "jev-1.14.0"
+ }
+}

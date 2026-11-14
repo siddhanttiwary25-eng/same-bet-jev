@@ -1,0 +1,6 @@
+.env
+.venv/
+data/kalshi.json
+data/polymarket.json
+data/candidates.json
+__pycache__/

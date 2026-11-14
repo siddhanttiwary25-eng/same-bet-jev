@@ -1,0 +1,231 @@
+<title>Same Bet? Jev Market Matcher</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column, a ticket-style comparison for every pair; data in mono, prices in cents like a contract quote. */
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --ink:#151821; --muted:#5b6170; --line:#dfe2e8;
+  --accent:#2a46c9; --accent-soft:#e7ebfb;
+  --same:#1d7a4d; --same-soft:#e2f3ea; --variant:#a3620b; --variant-soft:#fbf0dc; --diff:#9a3b3b; --diff-soft:#f7e6e6;
+  --display:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body:"IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12141a; --surface:#1a1d25; --ink:#e8eaf0; --muted:#9aa0ae; --line:#2c303b;
+  --accent:#8da0ff; --accent-soft:#232a48;
+  --same:#5fd09a; --same-soft:#173226; --variant:#f0b456; --variant-soft:#35291a; --diff:#f08a8a; --diff-soft:#3a2020;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12141a; --surface:#1a1d25; --ink:#e8eaf0; --muted:#9aa0ae; --line:#2c303b;
+  --accent:#8da0ff; --accent-soft:#232a48;
+  --same:#5fd09a; --same-soft:#173226; --variant:#f0b456; --variant-soft:#35291a; --diff:#f08a8a; --diff-soft:#3a2020;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 80px}
+.wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3,h4{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(2.2rem,6vw,3.4rem);font-weight:700;letter-spacing:-.02em}
+h2{font-size:1.7rem;font-weight:700}
+h3{font-size:1.15rem;font-weight:700}
+h4{font-size:1rem;font-weight:700;font-family:var(--body)}
+p{margin:0;max-width:68ch}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eyebrow{font:500 .75rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+section{display:flex;flex-direction:column;gap:18px}
+header{display:flex;flex-direction:column;gap:16px}
+.lede{font-size:1.15rem;color:var(--ink)}
+.byline{font:.85rem var(--mono);color:var(--muted)}
+.headline{background:var(--accent-soft);border-left:3px solid var(--accent);padding:14px 18px;font-weight:500}
+.tbl{overflow-x:auto;border:1px solid var(--line);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{font:500 .72rem var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+tbody td{font-family:var(--mono);font-size:.92rem}
+tbody th{font-weight:500}
+tr:last-child th,tr:last-child td{border-bottom:0}
+tr.jev th,tr.jev td{background:var(--accent-soft)}
+.note{font-size:.85rem;color:var(--muted)}
+.lab{font:500 .78rem var(--mono);padding:1px 7px;border-radius:3px;white-space:nowrap}
+.lab.same{color:var(--same);background:var(--same-soft)}
+.lab.variant{color:var(--variant);background:var(--variant-soft)}
+.lab.different{color:var(--diff);background:var(--diff-soft)}
+.traps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.traps li{background:var(--surface);border:1px solid var(--line);padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.trap-k{font-weight:600}
+.trap-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:.92rem}
+.trap-pair span{min-width:0}
+.trap-pair span::before{display:block;font:500 .68rem var(--mono);letter-spacing:.06em;color:var(--muted)}
+.trap-pair span:first-child::before{content:"POLYMARKET"}
+.trap-pair span:last-child::before{content:"KALSHI"}
+.trap-m{font:.8rem var(--mono);color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{font:500 .82rem var(--body);border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:6px 12px;border-radius:999px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.pairs{display:flex;flex-direction:column;gap:10px}
+.ticket{background:var(--surface);border:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;}
+.leg{padding:12px 14px;min-width:0;display:flex;flex-direction:column;gap:6px}
+.leg+.leg{border-left:1px dashed var(--line)}
+.leg .v{font:500 .68rem var(--mono);letter-spacing:.06em;color:var(--muted);display:flex;justify-content:space-between;gap:8px}
+.leg .t{font-size:.93rem;overflow-wrap:anywhere}
+.px{font-family:var(--mono);font-weight:500}
+.verdict{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 14px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font:.78rem var(--mono);color:var(--muted)}
+.verdict .miss{color:var(--diff);font-weight:500}
+.checks span{margin-right:10px}
+.more{align-self:flex-start;font:500 .85rem var(--body);background:none;border:1px solid var(--line);color:var(--ink);padding:8px 14px;cursor:pointer}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.seg,.obj{background:var(--surface);border:1px solid var(--line);padding:16px;display:flex;flex-direction:column;gap:8px}
+.seg p,.obj p{font-size:.93rem}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:2px 10px;font-size:.85rem}
+dt{font:500 .72rem var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted);padding-top:2px}
+dd{margin:0}
+.pitch{font-family:var(--display);font-size:1.3rem;font-weight:500;line-height:1.35;max-width:40ch}
+.playbook{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;border-left:2px solid var(--line)}
+.playbook li{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:10px 0 14px 16px;position:relative}
+.playbook li::before{content:"";position:absolute;left:-6px;top:16px;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.pb-d{font:500 .8rem var(--mono);color:var(--muted);padding-top:2px}
+.playbook p{font-size:.93rem}
+.caveats{font-size:.9rem;color:var(--muted);display:flex;flex-direction:column;gap:6px;padding-left:18px;margin:0}
+.acct td{font-family:var(--body);font-size:.9rem}
+@media (max-width:640px){
+  .grid2,.trap-pair{grid-template-columns:1fr}
+  .ticket{grid-template-columns:1fr}.leg+.leg{border-left:0;border-top:1px dashed var(--line)}
+  .playbook li{grid-template-columns:1fr;gap:2px}
+}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Polymarket × Kalshi · snapshot %%snap%%</div>
+  <h1>Same bet?</h1>
+  <p class="lede">Traders, aggregators and brokers need to know when a Polymarket market and a Kalshi market pay out on exactly the same outcome. I pointed TypeSafe's Jev at that question and tested it against the title matching most tools use today.</p>
+  <div class="byline">Siddhant Tiwary · appendix to my GTM Generalist application · model %%model%%</div>
+  <p class="headline">%%headline%%</p>
+</header>
+
+<section>
+  <div class="eyebrow">Benchmark</div>
+  <h2>%%n%% look-alike pairs, %%n_same%% of them truly the same bet</h2>
+  <div class="tbl"><table>
+    <thead><tr><th scope="col">Method</th><th scope="col">Accuracy</th><th scope="col">False matches</th><th scope="col">Missed matches</th><th scope="col">Cost / 1M pairs</th><th scope="col">Median latency</th></tr></thead>
+    <tbody>%%table%%</tbody>
+  </table></div>
+  <p class="note">"Same bet" vs "not the same bet." Jev's three-way accuracy (same / variant / different): %%three%%. %%cost_line%% *The title-match cutoff of %%best_cut%% was picked after seeing the answers, so that row is the best title matching can possibly do. Jev got no such help.</p>
+  <p class="note">%%orig_line%%</p>
+  %%hc_line%%
+</section>
+
+<section>
+  <div class="eyebrow">Why this is hard</div>
+  <h2>Near-identical titles, different payouts</h2>
+  <p>These pairs read almost the same, but they settle differently. A title matcher sees one market. A trader who treats them as one holds an unhedged position.</p>
+  <ul class="traps">%%traps%%</ul>
+</section>
+
+<section>
+  <div class="eyebrow">Fine print</div>
+  <h2>Jev caught %%n_fixed%% pairs I labeled wrong</h2>
+  <p>On its first run Jev refused to match some markets with word-for-word identical titles. I had labeled them the same bet. Reading the full rules showed Jev was right: the two venues pay out on different triggers. I corrected those labels, applied the same correction to every pair with the same rule pattern, and wrote down each reason.</p>
+  <ul class="traps">%%fine%%</ul>
+  <p class="note">A title matcher scores these pairs 100/100. A trader who hedged one venue with the other would be exposed exactly when it matters.</p>
+</section>
+
+<section>
+  <div class="eyebrow">Price gaps</div>
+  <h2>Confirmed twins, quoted differently</h2>
+  <p>Pairs that are the same bet, sorted by the gap between the two venues' YES prices. These are leads, not free money: Polymarket shows its mid price, Kalshi shows its ask, and fees and settlement wording still need checking.</p>
+  <div class="tbl"><table>
+    <thead><tr><th scope="col">Market</th><th scope="col">Polymarket</th><th scope="col">Kalshi</th><th scope="col">Gap</th></tr></thead>
+    <tbody id="gaps"></tbody>
+  </table></div>
+</section>
+
+<section>
+  <div class="eyebrow">Every pair</div>
+  <h2>Browse the answer key</h2>
+  <div class="filters" role="group" aria-label="Filter pairs">
+    <button type="button" data-f="all" aria-pressed="true">All</button>
+    <button type="button" data-f="miss" id="f-miss">Jev disagrees with key</button>
+    <button type="button" data-f="same">Same</button>
+    <button type="button" data-f="variant">Variant</button>
+    <button type="button" data-f="different">Different</button>
+  </div>
+  <div class="pairs" id="pairs"></div>
+  <button type="button" class="more" id="more">Show more</button>
+</section>
+
+<section>
+  <div class="eyebrow">GTM brief</div>
+  <h2>Who buys this, and how I'd sell it</h2>
+  <p class="pitch">%%pitch%%</p>
+  <h3>Ideal customers</h3>
+  <div class="grid2">%%icp%%</div>
+  <h3>First ten accounts</h3>
+  <div class="tbl"><table class="acct">
+    <thead><tr><th scope="col">Account</th><th scope="col">Type</th><th scope="col">Why now</th></tr></thead>
+    <tbody>%%accounts%%</tbody>
+  </table></div>
+  <h3>Objections</h3>
+  <div class="grid2">%%objections%%</div>
+</section>
+
+<section>
+  <div class="eyebrow">Trial playbook</div>
+  <h2>Two-week proof of concept</h2>
+  <p>The same steps I used here, packaged so any prospect can run them on their own data. The repo is the starter kit.</p>
+  <ol class="playbook">%%playbook%%</ol>
+</section>
+
+<section>
+  <div class="eyebrow">Method</div>
+  <h2>How this was built</h2>
+  <ul class="caveats">
+    <li>Pulled every open Polymarket market (top 2,100 by volume) and Kalshi market (about 200,000) from their public APIs.</li>
+    <li>For each Polymarket market, kept the two Kalshi markets with the most similar titles. That gives 2,434 hard look-alike pairs. A random 200 were sampled across similarity bands.</li>
+    <li>Labeled each pair same, variant or different from the full resolution rules. Labels were made with AI help and reviewed by me; 3 unclear pairs were dropped.</li>
+    <li>Jev got both markets' question and rules, and four questions: one choice (same / variant / different) and three yes/no checks. Its top choice is used as-is, with no threshold tuned.</li>
+    <li>The first-draft instructions were too strict: zero false matches, but they missed most real twins. I rewrote them using a separate 40-pair practice set that shares no markets with the test set (missed matches there fell from 11 to 2), locked them, and ran the test set once.</li>
+    <li>After the first run I reread the full rules of every pair Jev confidently disagreed with and corrected 10 labels where the payout rules differ. Scores against the original labels are shown too. I reviewed Jev's disagreements more closely than its agreements, which could flatter it slightly.</li>
+    <li>Not tested yet: a general-purpose LLM baseline, and a larger labeled set. Both are the first step of a real trial.</li>
+  </ul>
+</section>
+</div>
+
+<script type="application/json" id="data">%%data%%</script>
+<script>
+(function(){
+  const D = JSON.parse(document.getElementById('data').textContent);
+  const c = p => p == null ? '–' : (p*100).toFixed(p < 0.1 ? 1 : 0) + '¢';
+  const esc = s => String(s).replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+  const lab = l => `<span class="lab ${l}">${l}</span>`;
+  const gt = document.getElementById('gaps');
+  gt.innerHTML = D.gaps.length ? D.gaps.map(r => `<tr><th scope="row">${esc(r.a.t)}</th><td>${c(r.a.p)}</td><td>${c(r.b.p)}</td><td><b>${(r.gap*100).toFixed(1)}¢</b></td></tr>`).join('')
+    : '<tr><td colspan="4">No gaps yet.</td></tr>';
+  if (!D.haveJev) document.getElementById('f-miss').hidden = true;
+  let filter = 'all', shown = 20;
+  const box = document.getElementById('pairs'), more = document.getElementById('more');
+  const isMiss = r => r.jev && ((r.jev.d === 'same') !== (r.gold === 'same'));
+  function render(){
+    const list = D.rows.filter(r => filter === 'all' ? true : filter === 'miss' ? isMiss(r) : r.gold === filter);
+    box.innerHTML = list.slice(0, shown).map(r => {
+      const j = r.jev;
+      const jv = j ? `Jev ${lab(j.d)} ${(j.c*100).toFixed(0)}% <span class="checks"><span>subject ${(j.s*100).toFixed(0)}%</span><span>terms ${(j.x*100).toFixed(0)}%</span><span>deadline ${(j.w*100).toFixed(0)}%</span></span>${isMiss(r) ? '<span class="miss">disagrees</span>' : ''}` : 'Jev: running';
+      return `<article class="ticket">
+        <div class="leg"><div class="v"><span>POLYMARKET</span><span class="px">${c(r.a.p)}</span></div><div class="t"><a href="${esc(r.a.u)}" target="_blank" rel="noopener">${esc(r.a.t)}</a></div></div>
+        <div class="leg"><div class="v"><span>KALSHI · ${esc(r.b.tk)}</span><span class="px">${c(r.b.p)}</span></div><div class="t"><a href="${esc(r.b.u)}" target="_blank" rel="noopener">${esc(r.b.t)}</a></div></div>
+        <div class="verdict"><span>title similarity ${Math.round(r.fuzz)}</span><span>key ${lab(r.gold)}</span><span>${jv}</span></div>
+      </article>`;
+    }).join('') || '<p class="note">No pairs in this view.</p>';
+    more.hidden = list.length <= shown;
+  }
+  document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.filters button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    filter = b.dataset.f; shown = 20; render();
+  }));
+  more.addEventListener('click', () => { shown += 30; render(); });
+  render();
+})();
+</script>

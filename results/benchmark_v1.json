@@ -1,0 +1,294 @@
+{
+ "n_pairs": 197,
+ "n_true_matches": 37,
+ "model": "jev-1.14.0",
+ "prompt": "v1",
+ "jev": {
+  "accuracy": 0.848,
+  "precision": 1.0,
+  "recall": 0.189,
+  "false_matches": 0,
+  "missed_matches": 30,
+  "tp": 7,
+  "tn": 160,
+  "three_way_accuracy": 0.812
+ },
+ "fuzzy_best_cutoff": {
+  "cutoff": 97,
+  "accuracy": 0.832,
+  "precision": 0.577,
+  "recall": 0.405,
+  "false_matches": 11,
+  "missed_matches": 22,
+  "tp": 15,
+  "tn": 149
+ },
+ "fuzzy_at_90": {
+  "accuracy": 0.701,
+  "precision": 0.351,
+  "recall": 0.703,
+  "false_matches": 48,
+  "missed_matches": 11,
+  "tp": 26,
+  "tn": 112
+ },
+ "jev_high_confidence": {
+  "share_of_pairs": 0.706,
+  "accuracy": 0.993,
+  "precision": 0.0,
+  "recall": 0.0,
+  "false_matches": 0,
+  "missed_matches": 1,
+  "tp": 0,
+  "tn": 138
+ },
+ "latency_ms": {
+  "median": 167,
+  "p90": 224
+ },
+ "tokens_per_pair": 990,
+ "cost_usd_this_run": 0.0082,
+ "cost_usd_per_million_pairs": 41.6,
+ "jev_errors": [
+  {
+   "pair_id": "p2392",
+   "polymarket": "Will the US economy be in a soft landing at the end of 2026?",
+   "kalshi": "State of the economy at the end of 2026? \u2014 Soft landing",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.96
+  },
+  {
+   "pair_id": "p2406",
+   "polymarket": "Will Lyon win the 2026-27 Ligue 1 Championship?",
+   "kalshi": "Will Lyon win the 2026-27 Ligue 1?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.42
+  },
+  {
+   "pair_id": "p1759",
+   "polymarket": "Will Manchester City be relegated from the 2026-27 Premier League?",
+   "kalshi": "Will Manchester City be relegated from EPL in 2026-27 Season?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.25
+  },
+  {
+   "pair_id": "p1113",
+   "polymarket": "Will OpenAI announce another Millennium Prize solution by December 31, 2026?",
+   "kalshi": "Will OpenAI announce another Millennium Prize solution before Jan 1, 2027?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.7
+  },
+  {
+   "pair_id": "p0312",
+   "polymarket": "Will Manuel Bompard win the 2027 French presidential election?",
+   "kalshi": "Will Manuel Bompard win the 2027 French presidential election?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.42
+  },
+  {
+   "pair_id": "p0887",
+   "polymarket": "Will Teddy Riner win the 2027 French presidential election?",
+   "kalshi": "Will Teddy Riner win the 2027 French presidential election?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.49
+  },
+  {
+   "pair_id": "p2427",
+   "polymarket": "Will Milo\u0161 Vu\u010devi\u0107 win the next Serbia presidential election?",
+   "kalshi": "Will Milo\u0161 Vu\u010devi\u0107 win the next Serbian presidential election?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.46
+  },
+  {
+   "pair_id": "p0682",
+   "polymarket": "Will Arsenal win the 2026-27 English Premier League (EPL) Championship?",
+   "kalshi": "Will Arsenal win the English Premier League?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.28
+  },
+  {
+   "pair_id": "p1157",
+   "polymarket": "Will Vancouver Whitecaps FC win the 2026 MLS Cup?",
+   "kalshi": "Will Vancouver win the MLS Cup?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.34
+  },
+  {
+   "pair_id": "p0844",
+   "polymarket": "Will Manchester United win the 2026-27 UEFA Champions League Championship?",
+   "kalshi": "Will Manchester United win the Champions League?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.28
+  },
+  {
+   "pair_id": "p2414",
+   "polymarket": "Will Los Angeles FC win the 2026 MLS Cup?",
+   "kalshi": "Will Los Angeles F win the MLS Cup?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.46
+  },
+  {
+   "pair_id": "p1017",
+   "polymarket": "Will Fulham win the 2026-27 English Premier League (EPL) Championship?",
+   "kalshi": "Will Fulham win the English Premier League?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.34
+  },
+  {
+   "pair_id": "p2203",
+   "polymarket": "Will SC Freiburg be the 2026-27 Bundesliga champion?",
+   "kalshi": "Will Freiburg win the 2026-27 Bundesliga?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.48
+  },
+  {
+   "pair_id": "p0507",
+   "polymarket": "France declares state of emergency by December 31, 2026?",
+   "kalshi": "Will France declare a state of emergency before Jan 1, 2027?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.76
+  },
+  {
+   "pair_id": "p0354",
+   "polymarket": "Will Bruno Retailleau win the 2027 French presidential election?",
+   "kalshi": "Will Bruno Retailleau win the 2027 French presidential election?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.5
+  },
+  {
+   "pair_id": "p0304",
+   "polymarket": "Will \u00c9lisabeth Borne win the 2027 French presidential election?",
+   "kalshi": "Will \u00c9lisabeth Borne win the 2027 French presidential election?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.35
+  },
+  {
+   "pair_id": "p0282",
+   "polymarket": "Will Fran\u00e7ois Bayrou win the 2027 French presidential election?",
+   "kalshi": "Will Fran\u00e7ois Bayrou win the 2027 French presidential election?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.49
+  },
+  {
+   "pair_id": "p0363",
+   "polymarket": "Will \u00c9ric Zemmour win the 2027 French presidential election?",
+   "kalshi": "Will \u00c9ric Zemmour win the 2027 French presidential election?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.42
+  },
+  {
+   "pair_id": "p1731",
+   "polymarket": "Will Christopher Luxon be the next Prime Minister of New Zealand after the 2026 elections?",
+   "kalshi": "Will Christopher Luxon become Prime Minister of New Zealand following the 2026 New Zealand general election?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.74
+  },
+  {
+   "pair_id": "p1913",
+   "polymarket": "Will Kristi Noem leave the Trump administration before 2027?",
+   "kalshi": "Will Kristi Noem leave the Trump administration before Jan 1, 2027?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.73
+  },
+  {
+   "pair_id": "p1917",
+   "polymarket": "Will FC Dallas win the 2026 MLS Cup?",
+   "kalshi": "Will Dallas win the MLS Cup?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.4
+  },
+  {
+   "pair_id": "p1099",
+   "polymarket": "Will Houston Dynamo FC win the 2026 MLS Cup?",
+   "kalshi": "Will Houston win the MLS Cup?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.37
+  },
+  {
+   "pair_id": "p1164",
+   "polymarket": "Will Racing Santander win the 2026-27 LALIGA Championship?",
+   "kalshi": "Will Racing Santander win La Liga?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.3
+  },
+  {
+   "pair_id": "p0586",
+   "polymarket": "Will Portland Timbers win the 2026 MLS Cup?",
+   "kalshi": "Will Portland win the MLS Cup?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.3
+  },
+  {
+   "pair_id": "p0324",
+   "polymarket": "Will Fran\u00e7ois Ruffin win the 2027 French presidential election?",
+   "kalshi": "Will Fran\u00e7ois Ruffin win the 2027 French presidential election?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.46
+  },
+  {
+   "pair_id": "p2379",
+   "polymarket": "Will The Art of Loving (Olivia Dean) win Album of the Year at the 69th Annual GRAMMY Awards?",
+   "kalshi": "Will The Art of Loving win Album of the Year at the Grammys?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.34
+  },
+  {
+   "pair_id": "p0722",
+   "polymarket": "Will Chelsea win the 2026-27 English Premier League (EPL) Championship?",
+   "kalshi": "Will Chelsea win the English Premier League?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.28
+  },
+  {
+   "pair_id": "p1407",
+   "polymarket": "Will Rafael L\u00f3pez Aliaga win the next Lima mayoral elections?",
+   "kalshi": "Will Rafael L\u00f3pez Aliaga win the 2026 Lima mayoral election?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.33
+  },
+  {
+   "pair_id": "p1056",
+   "polymarket": "Will OpenAI announce another Millennium Prize solution by December 31, 2027?",
+   "kalshi": "Will OpenAI announce another Millennium Prize solution before Jan 1, 2028?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.7
+  },
+  {
+   "pair_id": "p0306",
+   "polymarket": "Will Marine Le Pen win the 2027 French presidential election?",
+   "kalshi": "Will Marine Le Pen win the 2027 French presidential election?",
+   "gold": "same",
+   "jev": "variant",
+   "confidence": 0.43
+  }
+ ]
+}

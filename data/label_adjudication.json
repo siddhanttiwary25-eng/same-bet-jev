@@ -1,0 +1,65 @@
+{
+ "note": "Corrections made after reading full resolution rules of every high-confidence disagreement. Applied by rule pattern to all matching pairs, not only ones Jev flagged. Pairs reviewed and kept as 'same': p2392 soft landing (identical thresholds), p1113/p1056 OpenAI Millennium, p0507 France emergency, p1731 Luxon, p1913 Noem (minor wording differences only).",
+ "changes": [
+  {
+   "pair_id": "p1651",
+   "from": "same",
+   "to": "variant",
+   "reason": "Kalshi resolves YES when the S-1 goes effective, the IPO is priced, or a ticker is assigned; Polymarket needs a completed first sale of stock. Different payout trigger."
+  },
+  {
+   "pair_id": "p1591",
+   "from": "same",
+   "to": "variant",
+   "reason": "Kalshi resolves YES when the S-1 goes effective, the IPO is priced, or a ticker is assigned; Polymarket needs a completed first sale of stock. Different payout trigger."
+  },
+  {
+   "pair_id": "p1620",
+   "from": "same",
+   "to": "variant",
+   "reason": "Kalshi resolves YES when the S-1 goes effective, the IPO is priced, or a ticker is assigned; Polymarket needs a completed first sale of stock. Different payout trigger."
+  },
+  {
+   "pair_id": "p1454",
+   "from": "same",
+   "to": "variant",
+   "reason": "Kalshi resolves YES when the S-1 goes effective, the IPO is priced, or a ticker is assigned; Polymarket needs a completed first sale of stock. Different payout trigger."
+  },
+  {
+   "pair_id": "p0286",
+   "from": "same",
+   "to": "variant",
+   "reason": "Kalshi counts acting/interim PMs and has no 2027 cutoff; Polymarket excludes interim PMs and resolves 'Other' after Dec 31, 2027. Different payout conditions."
+  },
+  {
+   "pair_id": "p0408",
+   "from": "same",
+   "to": "variant",
+   "reason": "Kalshi counts acting/interim PMs and has no 2027 cutoff; Polymarket excludes interim PMs and resolves 'Other' after Dec 31, 2027. Different payout conditions."
+  },
+  {
+   "pair_id": "p0428",
+   "from": "same",
+   "to": "variant",
+   "reason": "Kalshi counts acting/interim PMs and has no 2027 cutoff; Polymarket excludes interim PMs and resolves 'Other' after Dec 31, 2027. Different payout conditions."
+  },
+  {
+   "pair_id": "p0300",
+   "from": "same",
+   "to": "variant",
+   "reason": "Kalshi counts acting/interim PMs and has no 2027 cutoff; Polymarket excludes interim PMs and resolves 'Other' after Dec 31, 2027. Different payout conditions."
+  },
+  {
+   "pair_id": "p1379",
+   "from": "same",
+   "to": "variant",
+   "reason": "Kalshi requires a ratified agreement; Polymarket only requires both governments to announce diplomatic relations. Different payout trigger."
+  },
+  {
+   "pair_id": "p1124",
+   "from": "same",
+   "to": "variant",
+   "reason": "Kalshi requires a ratified agreement; Polymarket only requires both governments to announce diplomatic relations. Different payout trigger."
+  }
+ ]
+}
