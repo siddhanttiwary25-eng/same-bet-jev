@@ -111,7 +111,7 @@ def main():
         f'<span>{e(byid[i]["b"]["t"])}</span></div><div class="trap-m">title similarity <b>{byid[i]["fuzz"]:.0f}</b>/100 · '
         f'answer key: <b class="lab {byid[i]["gold"]}">{byid[i]["gold"]}</b>'
         + (f' · Jev: <b class="lab {byid[i]["jev"]["d"]}">{byid[i]["jev"]["d"]}</b>' if byid[i]["jev"] else "")
-        + "</div></li>" for i in traps if i in byid)
+        + "</div></li>" for i, lbl in traps if i in byid)
 
     icp_html = "".join(f'<div class="seg"><h4>{e(s["segment"])}</h4><p>{e(s["pain"])}</p>'
                        f'<dl><dt>Trigger</dt><dd>{e(s["trigger"])}</dd><dt>Buyer</dt><dd>{e(s["buyer"])}</dd></dl></div>'
