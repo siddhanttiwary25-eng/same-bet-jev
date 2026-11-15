@@ -75,7 +75,7 @@ def main():
                     "Jev results are being filled in.")
         three, model, hc = "pending", "jev-1.14.0", None
 
-    snap = datetime.date.today().isoformat()
+    snap = "2026-11-13"  # day the market data was pulled
     ks = [p["pair_id"] for p in pairs if orig[p["pair_id"]] != "unsure"]
     o_fp = sum(jev[k]["decision"] == "same" and orig[k] != "same" for k in ks) if have_jev else 0
     o_fn = sum(jev[k]["decision"] != "same" and orig[k] == "same" for k in ks) if have_jev else 0

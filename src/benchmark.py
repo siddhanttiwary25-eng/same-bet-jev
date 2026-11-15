@@ -26,10 +26,10 @@ def main():
     pairs = json.load(open(DATA / "sample200.json"))
     labels = json.load(open(DATA / "labels.json"))
     pairs = [p for p in pairs if labels[p["pair_id"]] != "unsure"]
-    key = load_key()
     cache_f = DATA / f"jev_results_{PROMPT}.json"
     cache = json.load(open(cache_f)) if cache_f.exists() else {}
     todo = [p for p in pairs if p["pair_id"] not in cache]
+    key = load_key() if todo else None  # saved answers can be re-scored without a key
 
     def run(p):
         return p["pair_id"], summarize(ask_jev(p["pm"], p["k"], key))
