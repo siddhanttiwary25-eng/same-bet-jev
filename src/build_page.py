@@ -42,9 +42,10 @@ def main():
         j = jev.get(p["pair_id"])
         rows.append({
             "id": p["pair_id"], "fuzz": p["fuzz"], "gold": labels[p["pair_id"]],
-            "a": {"t": p["pm"]["title"], "p": p["pm"]["yes_price"], "u": p["pm"]["url"]},
-            "b": {"t": p["k"]["title"], "p": p["k"]["yes_price"], "u": p["k"]["url"], "tk": p["k"]["id"]},
+            "a": {"t": p["pm"]["title"], "p": p["pm"]["yes_price"], "u": p["pm"]["url"], "r": (p["pm"].get("rules") or "")[:700]},
+            "b": {"t": p["k"]["title"], "p": p["k"]["yes_price"], "u": p["k"]["url"], "tk": p["k"]["id"], "r": (p["k"].get("rules") or "")[:700]},
             "jev": None if not j else {"d": j["decision"], "c": round(j["probabilities"][j["decision"]], 3),
+                                       "ps": round(j["probabilities"]["same"], 3), "cf": round(j["confidence"], 3),
                                        "s": round(j["same_subject"], 2), "x": round(j["same_terms"], 2),
                                        "w": round(j["same_window"], 2)},
         })
@@ -130,7 +131,8 @@ def main():
         objections=obj_html, orig_line=orig_line, fine=fine, n_fixed=len(adj["changes"]), playbook=pb_html, hc_line=hc_line, best_cut=best_cut,
         cost_line=(f"{bench['tokens_per_pair']} input tokens per pair; this whole run cost ${bench['cost_usd_this_run']:.4f}."
                    if have_jev else "About 700 input tokens per pair; the whole run costs under a cent."),
-        data=json.dumps({"rows": rows, "gaps": gaps[:15], "haveJev": have_jev}).replace("</", "<\\/"),
+        data=json.dumps({"rows": rows, "gaps": gaps[:15], "haveJev": have_jev,
+                         "tok": bench["tokens_per_pair"] if have_jev else 1100, "price": 0.042}).replace("</", "<\\/"),
     )
     page = TEMPLATE
     for k, v in vals.items():

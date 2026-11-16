@@ -90,6 +90,35 @@ dd{margin:0}
 .playbook p{font-size:.93rem}
 .caveats{font-size:.9rem;color:var(--muted);display:flex;flex-direction:column;gap:6px;padding-left:18px;margin:0}
 .acct td{font-family:var(--body);font-size:.9rem}
+.play{background:var(--surface);border:1px solid var(--line);padding:18px;display:flex;flex-direction:column;gap:14px}
+.play label{font:500 .85rem var(--body);display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.play label output{font:500 .9rem var(--mono);color:var(--accent)}
+input[type=range]{width:100%;accent-color:var(--accent)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.stat{border:1px solid var(--line);padding:10px 12px;display:flex;flex-direction:column;gap:2px}
+.stat b{font:500 1.4rem var(--mono);font-variant-numeric:tabular-nums}
+.stat span{font:.75rem var(--mono);color:var(--muted)}
+.stat.jev{background:var(--accent-soft);border-color:transparent}
+.stat .bad{color:var(--diff)}
+.chart{width:100%;height:auto;display:block}
+.chart text{fill:var(--muted);font:11px var(--mono)}
+.chart .grid{stroke:var(--line)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font:.78rem var(--mono);color:var(--muted)}
+.legend i{display:inline-block;width:14px;height:3px;vertical-align:middle;margin-right:6px}
+.calc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.calc label{flex-direction:column;align-items:stretch;gap:4px}
+.calc input{font:500 .95rem var(--mono);padding:8px 10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+.search{font:.95rem var(--body);padding:9px 12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);width:100%}
+details.rules{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 14px;font-size:.85rem}
+details.rules summary{cursor:pointer;font:500 .78rem var(--mono);color:var(--accent)}
+.rgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px;color:var(--muted)}
+.rgrid div{min-width:0;overflow-wrap:anywhere;white-space:pre-line}
+.bars{display:inline-flex;gap:10px;align-items:center}
+.bar{display:inline-flex;align-items:center;gap:4px}
+.bar s{display:inline-block;width:38px;height:6px;background:var(--line);position:relative;text-decoration:none}
+.bar s u{position:absolute;inset:0 auto 0 0;background:var(--accent)}
+@media (max-width:640px){.calc,.rgrid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media (max-width:640px){
   .grid2,.trap-pair{grid-template-columns:1fr}
   .ticket{grid-template-columns:1fr}.leg+.leg{border-left:0;border-top:1px dashed var(--line)}
@@ -116,6 +145,52 @@ dd{margin:0}
   <p class="note">"Same bet" vs "not the same bet." Jev's three-way accuracy (same / variant / different): %%three%%. %%cost_line%% *The title-match cutoff of %%best_cut%% was picked after seeing the answers, so that row is the best title matching can possibly do. Jev got no such help.</p>
   <p class="note">%%orig_line%%</p>
   %%hc_line%%
+</section>
+
+<section>
+  <div class="eyebrow">Try it</div>
+  <h2>Move the dial yourself</h2>
+  <p>Title matching has one knob: how similar two titles must be to count as a match. Drag it. Loosen it and false matches pile up; tighten it and real twins slip away. Jev's result, shown in blue, doesn't need a knob.</p>
+  <div class="play">
+    <label for="cut">Title-similarity cutoff <output id="cut-v">90</output></label>
+    <input type="range" id="cut" min="70" max="100" step="1" value="90">
+    <div class="stats">
+      <div class="stat"><span>title match: false matches</span><b id="fz-fp" class="bad">0</b></div>
+      <div class="stat"><span>title match: missed twins</span><b id="fz-fn">0</b></div>
+      <div class="stat jev"><span>Jev: false matches</span><b id="jv-fp">0</b></div>
+      <div class="stat jev"><span>Jev: missed twins</span><b id="jv-fn">0</b></div>
+    </div>
+    <svg class="chart" id="chart" viewBox="0 0 640 220" role="img" aria-label="False matches and missed twins for title matching at every cutoff, with Jev's result for comparison"></svg>
+    <div class="legend"><span><i style="background:var(--diff)"></i>title match: false matches</span><span><i style="background:var(--variant)"></i>title match: missed twins</span><span><i style="background:var(--accent)"></i>Jev (false + missed)</span></div>
+  </div>
+
+  <h3>Automate the confident calls</h3>
+  <p>Jev reports how confident it is. Pick a bar: pairs above it are decided automatically, the rest go to a person.</p>
+  <div class="play">
+    <label for="conf">Automate when Jev's confidence is at least <output id="conf-v">80%</output></label>
+    <input type="range" id="conf" min="0" max="99" step="1" value="80">
+    <div class="stats">
+      <div class="stat jev"><span>decided automatically</span><b id="rt-auto">0</b></div>
+      <div class="stat"><span>errors in automated pairs</span><b id="rt-err">0</b></div>
+      <div class="stat"><span>sent to a reviewer</span><b id="rt-rev">0</b></div>
+    </div>
+  </div>
+
+  <h3>What it costs at your volume</h3>
+  <p>Edit the numbers. The reviewer figures are assumptions; the Jev figure uses the tokens this test actually used.</p>
+  <div class="play">
+    <div class="calc">
+      <label for="vol">Pairs to check per month<input id="vol" type="number" min="0" step="1000" value="100000"></label>
+      <label for="mins">Reviewer minutes per pair<input id="mins" type="number" min="0" step="0.5" value="1"></label>
+      <label for="rate">Reviewer cost per hour ($)<input id="rate" type="number" min="0" step="5" value="40"></label>
+    </div>
+    <div class="stats">
+      <div class="stat"><span>all by hand</span><b id="c-hand">$0</b></div>
+      <div class="stat jev"><span>Jev for every pair</span><b id="c-jev">$0</b></div>
+      <div class="stat jev"><span>Jev + review the unsure ones</span><b id="c-mix">$0</b></div>
+      <div class="stat"><span>reviewer hours saved</span><b id="c-hrs">0</b></div>
+    </div>
+  </div>
 </section>
 
 <section>
@@ -153,6 +228,8 @@ dd{margin:0}
     <button type="button" data-f="variant">Variant</button>
     <button type="button" data-f="different">Different</button>
   </div>
+  <label for="q" class="note">Search markets</label>
+  <input id="q" class="search" type="search" placeholder="Try Arsenal, IPO, French, Bitcoin">
   <div class="pairs" id="pairs"></div>
   <button type="button" class="more" id="more">Show more</button>
 </section>
@@ -198,33 +275,98 @@ dd{margin:0}
 <script>
 (function(){
   const D = JSON.parse(document.getElementById('data').textContent);
+  const $ = id => document.getElementById(id);
   const c = p => p == null ? '–' : (p*100).toFixed(p < 0.1 ? 1 : 0) + '¢';
   const esc = s => String(s).replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
   const lab = l => `<span class="lab ${l}">${l}</span>`;
-  const gt = document.getElementById('gaps');
-  gt.innerHTML = D.gaps.length ? D.gaps.map(r => `<tr><th scope="row">${esc(r.a.t)}</th><td>${c(r.a.p)}</td><td>${c(r.b.p)}</td><td><b>${(r.gap*100).toFixed(1)}¢</b></td></tr>`).join('')
+  const pct = x => Math.round(x*100) + '%';
+  const money = x => '$' + (x >= 100 ? Math.round(x).toLocaleString() : x.toFixed(2));
+  const rows = D.rows, isSame = r => r.gold === 'same';
+
+  // price gaps
+  $('gaps').innerHTML = D.gaps.length ? D.gaps.map(r => `<tr><th scope="row">${esc(r.a.t)}</th><td>${c(r.a.p)}</td><td>${c(r.b.p)}</td><td><b>${(r.gap*100).toFixed(1)}¢</b></td></tr>`).join('')
     : '<tr><td colspan="4">No gaps yet.</td></tr>';
-  if (!D.haveJev) document.getElementById('f-miss').hidden = true;
-  let filter = 'all', shown = 20;
-  const box = document.getElementById('pairs'), more = document.getElementById('more');
-  const isMiss = r => r.jev && ((r.jev.d === 'same') !== (r.gold === 'same'));
+
+  // 1. cutoff slider + chart
+  const fuzzAt = cut => ({fp: rows.filter(r => r.fuzz >= cut && !isSame(r)).length, fn: rows.filter(r => r.fuzz < cut && isSame(r)).length});
+  const jfp = rows.filter(r => r.jev && r.jev.d === 'same' && !isSame(r)).length;
+  const jfn = rows.filter(r => r.jev && r.jev.d !== 'same' && isSame(r)).length;
+  $('jv-fp').textContent = jfp; $('jv-fn').textContent = jfn;
+  const curve = []; for (let k = 70; k <= 100; k++) curve.push({k, ...fuzzAt(k)});
+  const svg = $('chart'), L = 44, R = 624, T = 14, B = 186;
+  const ymax = Math.ceil(Math.max(...curve.map(p => Math.max(p.fp, p.fn))) / 20) * 20;
+  const x = k => L + (k - 70) / 30 * (R - L), y = v => B - v / ymax * (B - T);
+  const path = key => curve.map((p, i) => (i ? 'L' : 'M') + x(p.k).toFixed(1) + ' ' + y(p[key]).toFixed(1)).join(' ');
+  let g = '';
+  for (let v = 0; v <= ymax; v += 20) g += `<line class="grid" x1="${L}" x2="${R}" y1="${y(v)}" y2="${y(v)}"/><text x="${L-8}" y="${y(v)+4}" text-anchor="end">${v}</text>`;
+  for (let k = 70; k <= 100; k += 5) g += `<text x="${x(k)}" y="${B+18}" text-anchor="middle">${k}</text>`;
+  g += `<text x="${(L+R)/2}" y="${B+33}" text-anchor="middle">title-similarity cutoff</text>`;
+  g += `<path d="${path('fp')}" fill="none" stroke="var(--diff)" stroke-width="2.5"/>`;
+  g += `<path d="${path('fn')}" fill="none" stroke="var(--variant)" stroke-width="2.5"/>`;
+  g += `<line x1="${L}" x2="${R}" y1="${y(jfp+jfn)}" y2="${y(jfp+jfn)}" stroke="var(--accent)" stroke-width="2" stroke-dasharray="6 4"/>`;
+  g += `<text x="${L+8}" y="${y(jfp+jfn)-6}" text-anchor="start" style="fill:var(--accent)">Jev: ${jfp+jfn} errors total, no knob</text>`;
+  g += `<line id="cursor" y1="${T}" y2="${B}" stroke="var(--ink)" stroke-width="1"/>`;
+  g += `<circle id="dot-fp" r="4.5" fill="var(--diff)"/><circle id="dot-fn" r="4.5" fill="var(--variant)"/>`;
+  svg.setAttribute('viewBox', `0 0 640 ${B+40}`); svg.innerHTML = g;
+  function onCut(){
+    const k = +$('cut').value, f = fuzzAt(k);
+    $('cut-v').textContent = k; $('fz-fp').textContent = f.fp; $('fz-fn').textContent = f.fn;
+    const cx = x(k); $('cursor').setAttribute('x1', cx); $('cursor').setAttribute('x2', cx);
+    $('dot-fp').setAttribute('cx', cx); $('dot-fp').setAttribute('cy', y(f.fp));
+    $('dot-fn').setAttribute('cx', cx); $('dot-fn').setAttribute('cy', y(f.fn));
+  }
+  $('cut').addEventListener('input', onCut); onCut();
+
+  // 2. confidence routing
+  let autoShare = 0;
+  function onConf(){
+    const t = +$('conf').value / 100;
+    const auto = rows.filter(r => r.jev && r.jev.cf >= t);
+    const err = auto.filter(r => (r.jev.d === 'same') !== isSame(r)).length;
+    autoShare = auto.length / rows.length;
+    $('conf-v').textContent = pct(t);
+    $('rt-auto').textContent = `${auto.length} (${pct(autoShare)})`;
+    $('rt-err').textContent = err; $('rt-err').classList.toggle('bad', err > 0);
+    $('rt-rev').textContent = rows.length - auto.length;
+    onCalc();
+  }
+  // 3. cost calculator
+  function onCalc(){
+    const n = Math.max(0, +$('vol').value || 0), m = Math.max(0, +$('mins').value || 0), rate = Math.max(0, +$('rate').value || 0);
+    const hand = n * m / 60 * rate, jev = n * D.tok * D.price / 1e6, rev = n * (1 - autoShare);
+    $('c-hand').textContent = money(hand); $('c-jev').textContent = money(jev);
+    $('c-mix').textContent = money(jev + rev * m / 60 * rate);
+    $('c-hrs').textContent = Math.round(n * autoShare * m / 60).toLocaleString();
+  }
+  ['vol','mins','rate'].forEach(id => $(id).addEventListener('input', onCalc));
+  $('conf').addEventListener('input', onConf); onConf();
+
+  // 4. pair browser
+  if (!D.haveJev) $('f-miss').hidden = true;
+  let filter = 'all', shown = 20, q = '';
+  const box = $('pairs'), more = $('more');
+  const isMiss = r => r.jev && ((r.jev.d === 'same') !== isSame(r));
+  const bar = (name, v) => `<span class="bar">${name}<s><u style="width:${Math.round(v*100)}%"></u></s>${pct(v)}</span>`;
   function render(){
-    const list = D.rows.filter(r => filter === 'all' ? true : filter === 'miss' ? isMiss(r) : r.gold === filter);
+    const list = rows.filter(r => (filter === 'all' ? true : filter === 'miss' ? isMiss(r) : r.gold === filter)
+      && (!q || (r.a.t + ' ' + r.b.t).toLowerCase().includes(q)));
     box.innerHTML = list.slice(0, shown).map(r => {
       const j = r.jev;
-      const jv = j ? `Jev ${lab(j.d)} ${(j.c*100).toFixed(0)}% <span class="checks"><span>subject ${(j.s*100).toFixed(0)}%</span><span>terms ${(j.x*100).toFixed(0)}%</span><span>deadline ${(j.w*100).toFixed(0)}%</span></span>${isMiss(r) ? '<span class="miss">disagrees</span>' : ''}` : 'Jev: running';
+      const jv = j ? `Jev ${lab(j.d)} ${pct(j.c)} <span class="bars">${bar('subject', j.s)}${bar('terms', j.x)}${bar('deadline', j.w)}</span>${isMiss(r) ? ' <span class="miss">disagrees</span>' : ''}` : 'Jev: running';
       return `<article class="ticket">
         <div class="leg"><div class="v"><span>POLYMARKET</span><span class="px">${c(r.a.p)}</span></div><div class="t"><a href="${esc(r.a.u)}" target="_blank" rel="noopener">${esc(r.a.t)}</a></div></div>
         <div class="leg"><div class="v"><span>KALSHI · ${esc(r.b.tk)}</span><span class="px">${c(r.b.p)}</span></div><div class="t"><a href="${esc(r.b.u)}" target="_blank" rel="noopener">${esc(r.b.t)}</a></div></div>
         <div class="verdict"><span>title similarity ${Math.round(r.fuzz)}</span><span>key ${lab(r.gold)}</span><span>${jv}</span></div>
+        <details class="rules"><summary>Read both rulebooks</summary><div class="rgrid"><div><b>Polymarket</b>\n${esc(r.a.r || 'No rules text.')}</div><div><b>Kalshi</b>\n${esc(r.b.r || 'No rules text.')}</div></div></details>
       </article>`;
-    }).join('') || '<p class="note">No pairs in this view.</p>';
+    }).join('') || '<p class="note">No pairs match.</p>';
     more.hidden = list.length <= shown;
   }
   document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => {
     document.querySelectorAll('.filters button').forEach(x => x.setAttribute('aria-pressed', x === b));
     filter = b.dataset.f; shown = 20; render();
   }));
+  $('q').addEventListener('input', e => { q = e.target.value.trim().toLowerCase(); shown = 20; render(); });
   more.addEventListener('click', () => { shown += 30; render(); });
   render();
 })();
