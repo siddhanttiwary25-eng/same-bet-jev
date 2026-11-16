@@ -64,9 +64,8 @@ def main():
         J = bench["jev"]
         jcells = [f"{J['accuracy']:.0%}", str(J["false_matches"]), str(J["missed_matches"]),
                   f"${bench['cost_usd_per_million_pairs']:,.0f}", f"{bench['latency_ms']['median']/1000:.1f}s"]
-        headline = (f"Jev made zero false matches on {len(pairs)} look-alike pairs and caught {J['tp']} of {J['tp']+J['missed_matches']} "
-                    f"real twins. Title matching, even with its cutoff picked after seeing the answers, made "
-                    f"{best['false_matches']} false matches and missed {best['missed_matches']}.")
+        headline = (f"Result: Jev made 0 false matches and found {J['tp']} of {J['tp']+J['missed_matches']} true twins. "
+                    f"Title matching at its best: {best['false_matches']} false matches, {best['missed_matches']} missed.")
         three = f"{J['three_way_accuracy']:.0%}"
         model = bench["model"]
         hc = bench["jev_high_confidence"]

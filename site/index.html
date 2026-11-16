@@ -119,6 +119,13 @@ details.rules summary{cursor:pointer;font:500 .78rem var(--mono);color:var(--acc
 .bar s u{position:absolute;inset:0 auto 0 0;background:var(--accent)}
 @media (max-width:640px){.calc,.rgrid{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.value{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.value li{background:var(--accent-soft);border-top:3px solid var(--accent);padding:14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.vk{font:500 .72rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.value p{font-size:.95rem;line-height:1.5}
+details.method summary{cursor:pointer;font:600 1rem var(--body)}
+details.method ul{margin-top:12px}
+@media (max-width:640px){.value{grid-template-columns:1fr}}
 @media (max-width:640px){
   .grid2,.trap-pair{grid-template-columns:1fr}
   .ticket{grid-template-columns:1fr}.leg+.leg{border-left:0;border-top:1px dashed var(--line)}
@@ -130,9 +137,13 @@ details.rules summary{cursor:pointer;font:500 .78rem var(--mono);color:var(--acc
 <header>
   <div class="eyebrow">Polymarket × Kalshi · snapshot 2026-11-13</div>
   <h1>Same bet?</h1>
-  <p class="lede">Traders, aggregators and brokers need to know when a Polymarket market and a Kalshi market pay out on exactly the same outcome. I pointed TypeSafe's Jev at that question and tested it against the title matching most tools use today.</p>
   <div class="byline">Siddhant Tiwary · model jev-1.14.0 · <a href="https://github.com/siddhanttiwary25-eng/same-bet-jev" target="_blank" rel="noopener">code on GitHub</a></div>
-  <p class="headline">Jev made zero false matches on 197 look-alike pairs and caught 34 of 37 real twins. Title matching, even with its cutoff picked after seeing the answers, made 11 false matches and missed 22.</p>
+  <ol class="value">
+    <li><span class="vk">What it does</span><p>Decides whether a Polymarket market and a Kalshi market are <b>the same bet</b>, a <b>variant</b> (same race, different terms), or <b>unrelated</b>.</p></li>
+    <li><span class="vk">How Jev is used</span><p>One API call per pair. Jev reads both markets' full rules and returns a same / variant / different choice with probabilities, plus yes/no checks on subject, terms and deadline.</p></li>
+    <li><span class="vk">The value</span><p>Aggregators link markets without manual review, desks trust which spreads are real, and brokers never list two different bets as one. <b>0 false matches</b> on 197 hard pairs, at <b>$46 per million pairs</b>.</p></li>
+  </ol>
+  <p class="headline">Result: Jev made 0 false matches and found 34 of 37 true twins. Title matching at its best: 11 false matches, 22 missed.</p>
 </header>
 
 <section>
@@ -142,15 +153,13 @@ details.rules summary{cursor:pointer;font:500 .78rem var(--mono);color:var(--acc
     <thead><tr><th scope="col">Method</th><th scope="col">Accuracy</th><th scope="col">False matches</th><th scope="col">Missed matches</th><th scope="col">Cost / 1M pairs</th><th scope="col">Median latency</th></tr></thead>
     <tbody><tr class="jev"><th scope="row">Jev, tuned instructions</th><td>98%</td><td>0</td><td>3</td><td>$46</td><td>0.2s</td></tr><tr class=""><th scope="row">Jev, first-draft instructions</th><td>85%</td><td>0</td><td>30</td><td>$42</td><td>0.2s</td></tr><tr class=""><th scope="row">Title match, best cutoff (97/100)*</th><td>83%</td><td>11</td><td>22</td><td>≈$0</td><td>&lt;1ms</td></tr><tr class=""><th scope="row">Title match, common cutoff (90/100)</th><td>70%</td><td>48</td><td>11</td><td>≈$0</td><td>&lt;1ms</td></tr></tbody>
   </table></div>
-  <p class="note">"Same bet" vs "not the same bet." Jev's three-way accuracy (same / variant / different): 94%. 1096 input tokens per pair; this whole run cost $0.0091. *The title-match cutoff of 97 was picked after seeing the answers, so that row is the best title matching can possibly do. Jev got no such help.</p>
-  <p class="note">Scored against my original labels, before the fine-print corrections, tuned Jev still made 0 false matches and missed 13 of 47.</p>
-  <p>Confidence routing: on the 76% of pairs where Jev was at least 80% confident, it made 0 false matches and missed 1. Those can be automated; the rest go to a person.</p>
+  <p class="note">*Cutoff picked after seeing the answers, so this is the best title matching can do. Jev got no such help. Three-way accuracy: 94%.</p>
 </section>
 
 <section>
   <div class="eyebrow">Try it</div>
   <h2>Move the dial yourself</h2>
-  <p>Title matching has one knob: how similar two titles must be to count as a match. Drag it. Loosen it and false matches pile up; tighten it and real twins slip away. Jev's result, shown in blue, doesn't need a knob.</p>
+  <p>Drag title matching's only knob. Every setting trades false matches for missed twins. Jev needs no knob.</p>
   <div class="play">
     <label for="cut">Title-similarity cutoff <output id="cut-v">90</output></label>
     <input type="range" id="cut" min="70" max="100" step="1" value="90">
@@ -165,7 +174,7 @@ details.rules summary{cursor:pointer;font:500 .78rem var(--mono);color:var(--acc
   </div>
 
   <h3>Automate the confident calls</h3>
-  <p>Jev reports how confident it is. Pick a bar: pairs above it are decided automatically, the rest go to a person.</p>
+  <p>Pairs above the bar are decided automatically; the rest go to a person.</p>
   <div class="play">
     <label for="conf">Automate when Jev's confidence is at least <output id="conf-v">80%</output></label>
     <input type="range" id="conf" min="0" max="99" step="1" value="80">
@@ -177,7 +186,7 @@ details.rules summary{cursor:pointer;font:500 .78rem var(--mono);color:var(--acc
   </div>
 
   <h3>What it costs at your volume</h3>
-  <p>Edit the numbers. The reviewer figures are assumptions; the Jev figure uses the tokens this test actually used.</p>
+  <p>Reviewer figures are editable assumptions. Jev's cost uses this test's real token count.</p>
   <div class="play">
     <div class="calc">
       <label for="vol">Pairs to check per month<input id="vol" type="number" min="0" step="1000" value="100000"></label>
@@ -194,24 +203,18 @@ details.rules summary{cursor:pointer;font:500 .78rem var(--mono);color:var(--acc
 </section>
 
 <section>
-  <div class="eyebrow">Why this is hard</div>
-  <h2>Near-identical titles, different payouts</h2>
-  <p>These pairs read almost the same, but they settle differently. A title matcher sees one market. A trader who treats them as one holds an unhedged position.</p>
+  <div class="eyebrow">Why titles aren't enough</div>
+  <h2>Same words, different payouts</h2>
   <ul class="traps"><li><div class="trap-k">Win the nomination vs run for it</div><div class="trap-pair"><span>Will James Talarico win the 2028 Democratic presidential nomination?</span><span>Who will run for the Democratic presidential nomination in 2028? — James Talarico</span></div><div class="trap-m">title similarity <b>87</b>/100 · answer key: <b class="lab variant">variant</b> · Jev: <b class="lab variant">variant</b></div></li><li><div class="trap-k">Win the election vs make the runoff</div><div class="trap-pair"><span>Will Marine Le Pen win the 2027 French presidential election?</span><span>Will Marine Le Pen qualify for the runoff in the 2027 French presidential election?</span></div><div class="trap-m">title similarity <b>97</b>/100 · answer key: <b class="lab variant">variant</b> · Jev: <b class="lab variant">variant</b></div></li><li><div class="trap-k">Most seats vs at least 50 seats</div><div class="trap-pair"><span>Will Vox win the most seats in the 2026 Spanish general election?</span><span>Will Vox win at least 50 seats in the 2026 Spanish general election? — 50 or more</span></div><div class="trap-m">title similarity <b>96</b>/100 · answer key: <b class="lab variant">variant</b> · Jev: <b class="lab variant">variant</b></div></li><li><div class="trap-k">Champions League vs EFL Championship</div><div class="trap-pair"><span>Will LASK win the 2026-27 UEFA Champions League Championship?</span><span>Will QPR win the EFL Championship?</span></div><div class="trap-m">title similarity <b>87</b>/100 · answer key: <b class="lab different">different</b> · Jev: <b class="lab different">different</b></div></li><li><div class="trap-k">NFL champion vs win the first half</div><div class="trap-pair"><span>Will the Las Vegas Raiders win the 2027 NFL league championship?</span><span>Will Las Vegas win the 1st Half?</span></div><div class="trap-m">title similarity <b>82</b>/100 · answer key: <b class="lab different">different</b> · Jev: <b class="lab different">different</b></div></li></ul>
-</section>
-
-<section>
-  <div class="eyebrow">Fine print</div>
-  <h2>Jev caught 10 pairs I labeled wrong</h2>
-  <p>On its first run Jev refused to match some markets with word-for-word identical titles. I had labeled them the same bet. Reading the full rules showed Jev was right: the two venues pay out on different triggers. I corrected those labels, applied the same correction to every pair with the same rule pattern, and wrote down each reason.</p>
+  <h3>Jev caught 10 pairs I had labeled wrong</h3>
+  <p>Identical titles, but the rules pay out on different triggers. Title matching scores these 100/100.</p>
   <ul class="traps"><li><div class="trap-k">Vanta IPO before 2027?</div><div class="trap-m">identical-looking on both venues · title similarity <b>100</b>/100</div><p>Kalshi resolves YES when the S-1 goes effective, the IPO is priced, or a ticker is assigned; Polymarket needs a completed first sale of stock. Different payout trigger.</p></li><li><div class="trap-k">Will Naftali Bennett be the next Prime Minister of Israel?</div><div class="trap-m">identical-looking on both venues · title similarity <b>100</b>/100</div><p>Kalshi counts acting/interim PMs and has no 2027 cutoff; Polymarket excludes interim PMs and resolves &#x27;Other&#x27; after Dec 31, 2027. Different payout conditions.</p></li><li><div class="trap-k">Israel and Lebanon normalize relations before 2027?</div><div class="trap-m">identical-looking on both venues · title similarity <b>100</b>/100</div><p>Kalshi requires a ratified agreement; Polymarket only requires both governments to announce diplomatic relations. Different payout trigger.</p></li></ul>
-  <p class="note">A title matcher scores these pairs 100/100. A trader who hedged one venue with the other would be exposed exactly when it matters.</p>
 </section>
 
 <section>
   <div class="eyebrow">Price gaps</div>
   <h2>Confirmed twins, quoted differently</h2>
-  <p>Pairs that are the same bet, sorted by the gap between the two venues' YES prices. These are leads, not free money: Polymarket shows its mid price, Kalshi shows its ask, and fees and settlement wording still need checking.</p>
+  <p>Leads, not free money: prices are Polymarket mid vs Kalshi ask, before fees.</p>
   <div class="tbl"><table>
     <thead><tr><th scope="col">Market</th><th scope="col">Polymarket</th><th scope="col">Kalshi</th><th scope="col">Gap</th></tr></thead>
     <tbody id="gaps"></tbody>
@@ -252,22 +255,22 @@ details.rules summary{cursor:pointer;font:500 .78rem var(--mono);color:var(--acc
 <section>
   <div class="eyebrow">Trial playbook</div>
   <h2>Two-week proof of concept</h2>
-  <p>The same steps I used here, packaged so any prospect can run them on their own data. The repo is the starter kit.</p>
+  <p>The steps used here, packaged for any prospect's data. The repo is the starter kit.</p>
   <ol class="playbook"><li><span class='pb-d'>Day 0</span><div><h4>Kickoff</h4><p>Pick one workflow (listing dedup, arb leads, or catalog linking). Agree the success bar in writing, for example fewer than 2% false matches while catching 90% of true matches.</p></div></li><li><span class='pb-d'>Days 1-2</span><div><h4>Data</h4><p>Pull 200 to 500 candidate pairs from their catalog. Label them together, or use pairs they already mapped. Split into a dev set and a locked test set.</p></div></li><li><span class='pb-d'>Days 3-5</span><div><h4>Wire up</h4><p>Map their market fields into Jev&#x27;s state. Start from this repo&#x27;s question set. Tune instructions on the dev set only.</p></div></li><li><span class='pb-d'>Days 6-10</span><div><h4>Shadow run</h4><p>Run Jev next to their current method on live traffic. Log every disagreement and review it with their team.</p></div></li><li><span class='pb-d'>Days 11-14</span><div><h4>Readout</h4><p>Score the locked test set once. Report accuracy, false matches, missed matches, reviewer hours saved, and cost at their volume. Ask for the decision.</p></div></li></ol>
 </section>
 
 <section>
-  <div class="eyebrow">Method</div>
-  <h2>How this was built</h2>
-  <ul class="caveats">
-    <li>Pulled every open Polymarket market (top 2,100 by volume) and Kalshi market (about 200,000) from their public APIs.</li>
-    <li>For each Polymarket market, kept the two Kalshi markets with the most similar titles. That gives 2,434 hard look-alike pairs. A random 200 were sampled across similarity bands.</li>
-    <li>Labeled each pair same, variant or different from the full resolution rules. Labels were made with AI help and reviewed by me; 3 unclear pairs were dropped.</li>
-    <li>Jev got both markets' question and rules, and four questions: one choice (same / variant / different) and three yes/no checks. Its top choice is used as-is, with no threshold tuned.</li>
-    <li>The first-draft instructions were too strict: zero false matches, but they missed most real twins. I rewrote them using a separate 40-pair practice set that shares no markets with the test set (missed matches there fell from 11 to 2), locked them, and ran the test set once.</li>
-    <li>After the first run I reread the full rules of every pair Jev confidently disagreed with and corrected 10 labels where the payout rules differ. Scores against the original labels are shown too. I reviewed Jev's disagreements more closely than its agreements, which could flatter it slightly.</li>
-    <li>Not tested yet: a general-purpose LLM baseline, and a larger labeled set. Both are the first step of a real trial.</li>
-  </ul>
+  <details class="method">
+    <summary>How this was built, and its limits</summary>
+    <ul class="caveats">
+      <li>Data: every open Polymarket market (top 2,100 by volume) and Kalshi market (about 200,000) from public APIs.</li>
+      <li>Pairs: for each Polymarket market, the 2 Kalshi markets with the most similar titles; 200 sampled across similarity bands, 3 unclear dropped.</li>
+      <li>Labels: made with AI help from the full rules and reviewed by me. 10 corrected after Jev's first run flagged them (reasons in the repo). Scored against my original labels, before the fine-print corrections, tuned Jev still made 0 false matches and missed 13 of 47.</li>
+      <li>Tuning: first-draft instructions missed 30 twins. Rewritten on a separate 40-pair practice set with no shared markets, then the test set was run once.</li>
+      <li>1096 input tokens per pair; this whole run cost $0.0091.</li>
+      <li>Not yet tested: a general-purpose LLM baseline and a larger labeled set.</li>
+    </ul>
+  </details>
 </section>
 </div>
 

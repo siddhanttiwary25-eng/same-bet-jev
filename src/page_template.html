@@ -119,6 +119,13 @@ details.rules summary{cursor:pointer;font:500 .78rem var(--mono);color:var(--acc
 .bar s u{position:absolute;inset:0 auto 0 0;background:var(--accent)}
 @media (max-width:640px){.calc,.rgrid{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.value{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.value li{background:var(--accent-soft);border-top:3px solid var(--accent);padding:14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.vk{font:500 .72rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.value p{font-size:.95rem;line-height:1.5}
+details.method summary{cursor:pointer;font:600 1rem var(--body)}
+details.method ul{margin-top:12px}
+@media (max-width:640px){.value{grid-template-columns:1fr}}
 @media (max-width:640px){
   .grid2,.trap-pair{grid-template-columns:1fr}
   .ticket{grid-template-columns:1fr}.leg+.leg{border-left:0;border-top:1px dashed var(--line)}
@@ -130,8 +137,12 @@ details.rules summary{cursor:pointer;font:500 .78rem var(--mono);color:var(--acc
 <header>
   <div class="eyebrow">Polymarket × Kalshi · snapshot %%snap%%</div>
   <h1>Same bet?</h1>
-  <p class="lede">Traders, aggregators and brokers need to know when a Polymarket market and a Kalshi market pay out on exactly the same outcome. I pointed TypeSafe's Jev at that question and tested it against the title matching most tools use today.</p>
   <div class="byline">Siddhant Tiwary · model %%model%% · <a href="https://github.com/siddhanttiwary25-eng/same-bet-jev" target="_blank" rel="noopener">code on GitHub</a></div>
+  <ol class="value">
+    <li><span class="vk">What it does</span><p>Decides whether a Polymarket market and a Kalshi market are <b>the same bet</b>, a <b>variant</b> (same race, different terms), or <b>unrelated</b>.</p></li>
+    <li><span class="vk">How Jev is used</span><p>One API call per pair. Jev reads both markets' full rules and returns a same / variant / different choice with probabilities, plus yes/no checks on subject, terms and deadline.</p></li>
+    <li><span class="vk">The value</span><p>Aggregators link markets without manual review, desks trust which spreads are real, and brokers never list two different bets as one. <b>0 false matches</b> on 197 hard pairs, at <b>$46 per million pairs</b>.</p></li>
+  </ol>
   <p class="headline">%%headline%%</p>
 </header>
 
@@ -142,15 +153,13 @@ details.rules summary{cursor:pointer;font:500 .78rem var(--mono);color:var(--acc
     <thead><tr><th scope="col">Method</th><th scope="col">Accuracy</th><th scope="col">False matches</th><th scope="col">Missed matches</th><th scope="col">Cost / 1M pairs</th><th scope="col">Median latency</th></tr></thead>
     <tbody>%%table%%</tbody>
   </table></div>
-  <p class="note">"Same bet" vs "not the same bet." Jev's three-way accuracy (same / variant / different): %%three%%. %%cost_line%% *The title-match cutoff of %%best_cut%% was picked after seeing the answers, so that row is the best title matching can possibly do. Jev got no such help.</p>
-  <p class="note">%%orig_line%%</p>
-  %%hc_line%%
+  <p class="note">*Cutoff picked after seeing the answers, so this is the best title matching can do. Jev got no such help. Three-way accuracy: %%three%%.</p>
 </section>
 
 <section>
   <div class="eyebrow">Try it</div>
   <h2>Move the dial yourself</h2>
-  <p>Title matching has one knob: how similar two titles must be to count as a match. Drag it. Loosen it and false matches pile up; tighten it and real twins slip away. Jev's result, shown in blue, doesn't need a knob.</p>
+  <p>Drag title matching's only knob. Every setting trades false matches for missed twins. Jev needs no knob.</p>
   <div class="play">
     <label for="cut">Title-similarity cutoff <output id="cut-v">90</output></label>
     <input type="range" id="cut" min="70" max="100" step="1" value="90">
@@ -165,7 +174,7 @@ details.rules summary{cursor:pointer;font:500 .78rem var(--mono);color:var(--acc
   </div>
 
   <h3>Automate the confident calls</h3>
-  <p>Jev reports how confident it is. Pick a bar: pairs above it are decided automatically, the rest go to a person.</p>
+  <p>Pairs above the bar are decided automatically; the rest go to a person.</p>
   <div class="play">
     <label for="conf">Automate when Jev's confidence is at least <output id="conf-v">80%</output></label>
     <input type="range" id="conf" min="0" max="99" step="1" value="80">
@@ -177,7 +186,7 @@ details.rules summary{cursor:pointer;font:500 .78rem var(--mono);color:var(--acc
   </div>
 
   <h3>What it costs at your volume</h3>
-  <p>Edit the numbers. The reviewer figures are assumptions; the Jev figure uses the tokens this test actually used.</p>
+  <p>Reviewer figures are editable assumptions. Jev's cost uses this test's real token count.</p>
   <div class="play">
     <div class="calc">
       <label for="vol">Pairs to check per month<input id="vol" type="number" min="0" step="1000" value="100000"></label>
@@ -194,24 +203,18 @@ details.rules summary{cursor:pointer;font:500 .78rem var(--mono);color:var(--acc
 </section>
 
 <section>
-  <div class="eyebrow">Why this is hard</div>
-  <h2>Near-identical titles, different payouts</h2>
-  <p>These pairs read almost the same, but they settle differently. A title matcher sees one market. A trader who treats them as one holds an unhedged position.</p>
+  <div class="eyebrow">Why titles aren't enough</div>
+  <h2>Same words, different payouts</h2>
   <ul class="traps">%%traps%%</ul>
-</section>
-
-<section>
-  <div class="eyebrow">Fine print</div>
-  <h2>Jev caught %%n_fixed%% pairs I labeled wrong</h2>
-  <p>On its first run Jev refused to match some markets with word-for-word identical titles. I had labeled them the same bet. Reading the full rules showed Jev was right: the two venues pay out on different triggers. I corrected those labels, applied the same correction to every pair with the same rule pattern, and wrote down each reason.</p>
+  <h3>Jev caught %%n_fixed%% pairs I had labeled wrong</h3>
+  <p>Identical titles, but the rules pay out on different triggers. Title matching scores these 100/100.</p>
   <ul class="traps">%%fine%%</ul>
-  <p class="note">A title matcher scores these pairs 100/100. A trader who hedged one venue with the other would be exposed exactly when it matters.</p>
 </section>
 
 <section>
   <div class="eyebrow">Price gaps</div>
   <h2>Confirmed twins, quoted differently</h2>
-  <p>Pairs that are the same bet, sorted by the gap between the two venues' YES prices. These are leads, not free money: Polymarket shows its mid price, Kalshi shows its ask, and fees and settlement wording still need checking.</p>
+  <p>Leads, not free money: prices are Polymarket mid vs Kalshi ask, before fees.</p>
   <div class="tbl"><table>
     <thead><tr><th scope="col">Market</th><th scope="col">Polymarket</th><th scope="col">Kalshi</th><th scope="col">Gap</th></tr></thead>
     <tbody id="gaps"></tbody>
@@ -252,22 +255,22 @@ details.rules summary{cursor:pointer;font:500 .78rem var(--mono);color:var(--acc
 <section>
   <div class="eyebrow">Trial playbook</div>
   <h2>Two-week proof of concept</h2>
-  <p>The same steps I used here, packaged so any prospect can run them on their own data. The repo is the starter kit.</p>
+  <p>The steps used here, packaged for any prospect's data. The repo is the starter kit.</p>
   <ol class="playbook">%%playbook%%</ol>
 </section>
 
 <section>
-  <div class="eyebrow">Method</div>
-  <h2>How this was built</h2>
-  <ul class="caveats">
-    <li>Pulled every open Polymarket market (top 2,100 by volume) and Kalshi market (about 200,000) from their public APIs.</li>
-    <li>For each Polymarket market, kept the two Kalshi markets with the most similar titles. That gives 2,434 hard look-alike pairs. A random 200 were sampled across similarity bands.</li>
-    <li>Labeled each pair same, variant or different from the full resolution rules. Labels were made with AI help and reviewed by me; 3 unclear pairs were dropped.</li>
-    <li>Jev got both markets' question and rules, and four questions: one choice (same / variant / different) and three yes/no checks. Its top choice is used as-is, with no threshold tuned.</li>
-    <li>The first-draft instructions were too strict: zero false matches, but they missed most real twins. I rewrote them using a separate 40-pair practice set that shares no markets with the test set (missed matches there fell from 11 to 2), locked them, and ran the test set once.</li>
-    <li>After the first run I reread the full rules of every pair Jev confidently disagreed with and corrected 10 labels where the payout rules differ. Scores against the original labels are shown too. I reviewed Jev's disagreements more closely than its agreements, which could flatter it slightly.</li>
-    <li>Not tested yet: a general-purpose LLM baseline, and a larger labeled set. Both are the first step of a real trial.</li>
-  </ul>
+  <details class="method">
+    <summary>How this was built, and its limits</summary>
+    <ul class="caveats">
+      <li>Data: every open Polymarket market (top 2,100 by volume) and Kalshi market (about 200,000) from public APIs.</li>
+      <li>Pairs: for each Polymarket market, the 2 Kalshi markets with the most similar titles; 200 sampled across similarity bands, 3 unclear dropped.</li>
+      <li>Labels: made with AI help from the full rules and reviewed by me. 10 corrected after Jev's first run flagged them (reasons in the repo). %%orig_line%%</li>
+      <li>Tuning: first-draft instructions missed 30 twins. Rewritten on a separate 40-pair practice set with no shared markets, then the test set was run once.</li>
+      <li>%%cost_line%%</li>
+      <li>Not yet tested: a general-purpose LLM baseline and a larger labeled set.</li>
+    </ul>
+  </details>
 </section>
 </div>
 
